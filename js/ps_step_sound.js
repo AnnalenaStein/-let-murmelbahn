@@ -121,11 +121,11 @@ const wrap = {
   ));
 
   // the ball has the label "Murmel" and can cause collisions (see below)
-  blocks.push(new Ball(
+ ball = new Ball(
     world,
-    { x: 300, y: 300, r: 30, color: 'magenta' },
-    { label: "Murmel" }
-  ));
+    { x: 100, y: 50, r: 45, color: 'magenta' },
+    { restitution: 0.2, plugin: {wrap: wrap}, label: "Murmel", label: 'character' }
+  );
 
   blocks.push(new BlockCore(
     world,
@@ -146,11 +146,11 @@ const wrap = {
     { isStatic: false, restitution: 1.0 }));
 
   // add ball with image
-    ball = new Ball(
-      world,
-      { x: 100, y: 50, r: 45, color: 'white', image: ballImg },
-      { restitution: 0.2, plugin: { wrap: wrap },label: 'Murmel', label: 'character'}
-    );
+    // ball = new Ball(
+    //   world,
+    //   { x: 100, y: 50, r: 45, color: 'white', image: ballImg },
+    //   { restitution: 0.2, plugin: { wrap: wrap },label: 'Murmel', label: 'character'}
+    // );
 
   // blocks.push(new Ball(
   //   world,
