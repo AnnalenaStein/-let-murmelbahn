@@ -24,7 +24,7 @@ let angle = 0;
 
 let poly, ballImg, blockImg, noteImg;
 let magnet;
-let characterTouchingASurface = false;
+let MurmelTouchingASurface = false;
 let ball;
 
 function preload() {
@@ -129,7 +129,7 @@ const wrap = {
  ball = new Ball(
     world,
     { x: 100, y: 50, r: 45, color: 'magenta' },
-    { restitution: 0.2, plugin: {wrap: wrap}, label: "Murmel", label: 'character' }
+    { restitution: 0.2, plugin: {wrap: wrap}, label: "Murmel", label: 'Murmel' }
   );
 
   blocks.push(new BlockCore(
@@ -146,10 +146,10 @@ const wrap = {
 
   //add ball with notenImage
   //NOTE 
-  ball = new Ball(
+  ball = new PolygonFromSVG(
     world,
-    { x: 100, y: 60, r: 40, image: noteImg },
-    { restitution: 0.2, plugin: {wrap: wrap}, label: "Murmel", label: 'character', }
+    { x: 110, y: 60,  fromFile: './img/note.svg', image: noteImg },
+    { restitution: 0.1 , plugin: {wrap: wrap}, label: "Murmel" }
   );
 
   // add box with image
@@ -175,15 +175,15 @@ const wrap = {
     }
     isDrag = false;
     // mySound.play();
-  });
+  });       
 
-   // Check if character is touching a surface (e.g. the ground) so we know when it should be able to jump
+   // Check if Murmel is touching a surface (e.g. the ground) so we know when it should be able to jump
    Matter.Events.on(engine, 'collisionStart', function(event) {
     const pairs = event.pairs[0];
     const bodyA = pairs.bodyA;
     const bodyB = pairs.bodyB;
-    if (bodyA.label === "character" || bodyB.label === "character") {
-      characterTouchingASurface = true
+    if (bodyA.label === "Murmel" || bodyB.label === "Murmel") {
+      MurmelTouchingASurface = true
     }
   });
 
@@ -191,8 +191,8 @@ const wrap = {
     const pairs = event.pairs[0];
     const bodyA = pairs.bodyA;
     const bodyB = pairs.bodyB;
-    if (bodyA.label === "character" || bodyB.label === "character") {
-      characterTouchingASurface = false
+    if (bodyA.label === "Murmel" || bodyB.label === "Murmel") {
+      MurmelTouchingASurface = false
     }
   });
 
@@ -235,8 +235,8 @@ function draw() {
 }
 
 function keyPressed() {
-  // is SPACE pressed and character touching a surface?
-  if (keyCode === 32 && characterTouchingASurface === true) {
+  // is SPACE pressed and Murmel touching a surface?
+  if (keyCode === 32 && MurmelTouchingASurface === true) {
     let direction = 1; // ball runs left to right ->
     if ((ball.body.position.x - ball.body.positionPrev.x) < 0) {
       direction = -1; // ball runs right to left <-
