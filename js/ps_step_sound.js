@@ -129,7 +129,7 @@ const wrap = {
  ball = new Ball(
     world,
     { x: 100, y: 50, r: 45, color: 'magenta' },
-    { restitution: 0.2, plugin: {wrap: wrap}, label: 'Murmel', label: 'character'},
+    { restitution: 0.2, plugin: {wrap: wrap}, label: "Murmel", label: 'character' }
   );
 
   blocks.push(new BlockCore(
@@ -144,11 +144,11 @@ const wrap = {
     { isStatic: false, angle: radians(90), restitution: 0.5 }
   ));
 
-  //NOTE
   //add ball with notenImage
+  //NOTE 
   ball = new Ball(
     world,
-    { x: 100, y: 50, r: 20, image: noteImg },
+    { x: 100, y: 60, r: 40, image: noteImg },
     { restitution: 0.2, plugin: {wrap: wrap}, label: "Murmel", label: 'character', }
   );
 
