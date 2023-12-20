@@ -80,7 +80,7 @@ const wrap = {
       x: 200, y: 250, w: 250, h: 10, color: 'red',
       trigger: (ball, blocks) => { //Trigger für Musik
         console.log("Trigger", ball, blocks); 
-        mySound.play(); //Musik wird abgespielt 
+        mySound.play(); //Klavier Sound wird abgespielt 
       }
     },
     { isStatic: true, angle: radians(10) }
@@ -123,13 +123,33 @@ const wrap = {
     { x: windowWidth / 2, y: 900, w: windowWidth, h: 10, color: 'grey' },
     { isStatic: true }
   ));
+for(let b = 1; b<10; b++) {
+
+  const fixed1 = new Block(
+    world, {
+    x: 250 + b*100,
+    y: 400+b*10,
+    w: 1,
+    h: 1,
+    color: 'cyan'
+  }, { isStatic: false }
+  );
+  fixed1.constrainTo(null, { pointB: { x: 500 + b*100, y: 180+b*10 }, length: 200, draw: true });
+  blocks.push(fixed1);
+
+}
+
 
   // the ball has the label "Murmel" and can cause collisions (see below)
   //Magenta Ball
- ball = new Ball(
+   ball = new Ball(
     world,
     { x: 100, y: 50, r: 45, color: 'magenta' },
+<<<<<<< HEAD
     { restitution: 0.2, plugin: {wrap: wrap}, label: "Murmel", label: 'Murmel' }
+=======
+    { restitution: 0.2, plugin: {wrap: wrap}, label: 'Murmel'},
+>>>>>>> f9af2422d43eac919b3ac843ae11edf4f3eb7573
   );
 
   blocks.push(new BlockCore(
@@ -145,12 +165,20 @@ const wrap = {
   ));
 
   //add ball with notenImage
+<<<<<<< HEAD
   //NOTE 
   ball = new PolygonFromSVG(
     world,
     { x: 110, y: 60,  fromFile: './img/note.svg', image: noteImg },
     { restitution: 0.1 , plugin: {wrap: wrap}, label: "Murmel" }
   );
+=======
+  // ball = new Ball(
+  //   world,
+  //   { x: 100, y: 50, r: 20, image: noteImg },
+  //   { restitution: 0.2, plugin: {wrap: wrap}, label: "Murmel", label: 'character', }
+  // );
+>>>>>>> f9af2422d43eac919b3ac843ae11edf4f3eb7573
 
   // add box with image
   blocks.push(new Block(
@@ -180,10 +208,15 @@ const wrap = {
    // Check if Murmel is touching a surface (e.g. the ground) so we know when it should be able to jump
    Matter.Events.on(engine, 'collisionStart', function(event) {
     const pairs = event.pairs[0];
-    const bodyA = pairs.bodyA;
+    const bodyA = pairs.bodyA;  
     const bodyB = pairs.bodyB;
+<<<<<<< HEAD
     if (bodyA.label === "Murmel" || bodyB.label === "Murmel") {
       MurmelTouchingASurface = true
+=======
+    if (bodyA.label === 'Murmel' || bodyB.label === 'Murmel') {
+      characterTouchingASurface = true
+>>>>>>> f9af2422d43eac919b3ac843ae11edf4f3eb7573
     }
   });
 
@@ -191,8 +224,13 @@ const wrap = {
     const pairs = event.pairs[0];
     const bodyA = pairs.bodyA;
     const bodyB = pairs.bodyB;
+<<<<<<< HEAD
     if (bodyA.label === "Murmel" || bodyB.label === "Murmel") {
       MurmelTouchingASurface = false
+=======
+    if (bodyA.label === 'Murmel' || bodyB.label === 'Murmel') {
+      characterTouchingASurface = false
+>>>>>>> f9af2422d43eac919b3ac843ae11edf4f3eb7573
     }
   });
 
@@ -214,7 +252,6 @@ const wrap = {
   // run the engine
   Runner.run(engine);   
 }
-
 
 
 function draw() {
