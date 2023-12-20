@@ -129,7 +129,7 @@ const wrap = {
    ball = new Ball(
     world,
     { x: 100, y: 50, r: 45, color: 'magenta' },
-    { restitution: 0.2, plugin: {wrap: wrap}, label: 'Murmel', label: 'character'},
+    { restitution: 0.2, plugin: {wrap: wrap}, label: 'Murmel'},
   );
 
   blocks.push(new BlockCore(
@@ -180,9 +180,9 @@ const wrap = {
    // Check if character is touching a surface (e.g. the ground) so we know when it should be able to jump
    Matter.Events.on(engine, 'collisionStart', function(event) {
     const pairs = event.pairs[0];
-    const bodyA = pairs.bodyA;
+    const bodyA = pairs.bodyA;  
     const bodyB = pairs.bodyB;
-    if (bodyA.label === "character" || bodyB.label === "character") {
+    if (bodyA.label === 'Murmel' || bodyB.label === 'Murmel') {
       characterTouchingASurface = true
     }
   });
@@ -191,7 +191,7 @@ const wrap = {
     const pairs = event.pairs[0];
     const bodyA = pairs.bodyA;
     const bodyB = pairs.bodyB;
-    if (bodyA.label === "character" || bodyB.label === "character") {
+    if (bodyA.label === 'Murmel' || bodyB.label === 'Murmel') {
       characterTouchingASurface = false
     }
   });
