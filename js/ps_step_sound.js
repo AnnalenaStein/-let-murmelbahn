@@ -122,6 +122,22 @@ const wrap = {
     { x: windowWidth / 2, y: 900, w: windowWidth, h: 10, color: 'grey' },
     { isStatic: true }
   ));
+for(let b = 1; b<10; b++) {
+
+  const fixed1 = new Block(
+    world, {
+    x: 250 + b*100,
+    y: 400+b*10,
+    w: 1,
+    h: 1,
+    color: 'cyan'
+  }, { isStatic: false }
+  );
+  fixed1.constrainTo(null, { pointB: { x: 500 + b*100, y: 180+b*10 }, length: 200, draw: true });
+  blocks.push(fixed1);
+
+}
+
 
   // the ball has the label "Murmel" and can cause collisions (see below)
   //Magenta Ball
@@ -205,7 +221,6 @@ const wrap = {
   // run the engine
   Runner.run(engine);   
 }
-
 
 
 function draw() {
