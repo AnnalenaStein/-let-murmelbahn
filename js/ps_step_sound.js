@@ -22,7 +22,7 @@ let pianoSound;
 let propeller;
 let angle = 0;
 
-let poly, ballImg, blockImg;
+let poly, ballImg, blockImg, noteImg;
 let magnet;
 let characterTouchingASurface = false;
 let ball;
@@ -31,6 +31,7 @@ function preload() {
   poly = loadImage('./img/poly.png');
   ballImg = loadImage('./img/ball.png');
   boxImg = loadImage('./img/box.png');
+  noteImg = loadImage('./img/note.png');
   soundFormats('mp3');
   mySound = loadSound('./sounds/xylophone.mp3'); //Sounddatei aus STEP Ordner
   console.log(mySound);
@@ -143,6 +144,14 @@ const wrap = {
     { isStatic: false, angle: radians(90), restitution: 0.5 }
   ));
 
+  //NOTE
+  //add ball with notenImage
+  ball = new Ball(
+    world,
+    { x: 100, y: 50, r: 20, image: noteImg },
+    { restitution: 0.2, plugin: {wrap: wrap}, label: "Murmel", label: 'character', }
+  );
+
   // add box with image
   blocks.push(new Block(
     world,
@@ -209,7 +218,7 @@ const wrap = {
 
 
 function draw() {
-  background(0, 20);
+  background(40);
   // animate attracted blocks
   // magnet.attract();
 
