@@ -126,7 +126,7 @@ const wrap = {
 
   // the ball has the label "Murmel" and can cause collisions (see below)
   //Magenta Ball
- ball = new Ball(
+   ball = new Ball(
     world,
     { x: 100, y: 50, r: 45, color: 'magenta' },
     { restitution: 0.2, plugin: {wrap: wrap}, label: 'Murmel', label: 'character'},
@@ -146,11 +146,11 @@ const wrap = {
 
   //NOTE
   //add ball with notenImage
-  ball = new Ball(
-    world,
-    { x: 100, y: 50, r: 20, image: noteImg },
-    { restitution: 0.2, plugin: {wrap: wrap}, label: "Murmel", label: 'character', }
-  );
+  // ball = new Ball(
+  //   world,
+  //   { x: 100, y: 50, r: 20, image: noteImg },
+  //   { restitution: 0.2, plugin: {wrap: wrap}, label: "Murmel", label: 'character', }
+  // );
 
   // add box with image
   blocks.push(new Block(
