@@ -110,7 +110,7 @@ const wrap = {
   blocks.push(new BlockCore(
     world,
     { x: 500, y: 400, w: 200, h: 10, color: 'magenta',
-      trigger: (ball, block) => {
+      trigger: (ball, blocks) => {
         pianoSound.play();
       } 
     },
