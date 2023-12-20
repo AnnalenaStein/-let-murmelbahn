@@ -85,6 +85,7 @@ const wrap = {
     { isStatic: true, angle: radians(10) }
   ));
 
+  //Gelber Balken
   blocks.push(new BlockCore(
     world,
     { x: 300, y: 300, w: 200, h: 10, color: 'yellow', 
@@ -95,6 +96,7 @@ const wrap = {
     { isStatic: true, angle: radians(10) }
   ));
 
+  //Cyan Balken
   blocks.push(new BlockCore(
     world,
     { x: 400, y: 350, w: 200, h: 10, color: 'cyan',
@@ -104,6 +106,7 @@ const wrap = {
     { isStatic: true, angle: radians(10) }
   ));
 
+  //Magenta Balken
   blocks.push(new BlockCore(
     world,
     { x: 500, y: 400, w: 200, h: 10, color: 'magenta',
@@ -145,17 +148,6 @@ const wrap = {
     { x: 200, y: 0, w: 64, h: 64, image: boxImg },
     { isStatic: false, restitution: 1.0 }));
 
-  // add ball with image
-    // ball = new Ball(
-    //   world,
-    //   { x: 100, y: 50, r: 45, color: 'white', image: ballImg },
-    //   { restitution: 0.2, plugin: { wrap: wrap },label: 'Murmel', label: 'character'}
-    // );
-
-  // blocks.push(new Ball(
-  //   world,
-  //   { x: 100, y: 50, r: 45, color: 'yellow', image: ballImg,},
-  //   { restitution: 0.2, label: "Murmel", label: 'character' })); //Wichtig, wenn Trigger dann mit label benennen
 
   // add a mouse so that we can manipulate Matter objects (Development time only!)
   mouse = new Mouse(engine, canvas, { stroke: 'blue', strokeWeight: 3 });
