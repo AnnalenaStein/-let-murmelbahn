@@ -124,6 +124,7 @@ const wrap = {
   ));
 
   // the ball has the label "Murmel" and can cause collisions (see below)
+  //Magenta Ball
  ball = new Ball(
     world,
     { x: 100, y: 50, r: 45, color: 'magenta' },
