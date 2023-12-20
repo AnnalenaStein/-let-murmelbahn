@@ -22,7 +22,7 @@ let pianoSound;
 let propeller;
 let angle = 0;
 
-let poly, ballImg, blockImg;
+let poly, ballImg, blockImg, noteImg;
 let magnet;
 let characterTouchingASurface = false;
 let ball;
@@ -31,6 +31,7 @@ function preload() {
   poly = loadImage('./img/poly.png');
   ballImg = loadImage('./img/ball.png');
   boxImg = loadImage('./img/box.png');
+  noteImg = loadImage('./img/note.png');
   soundFormats('mp3');
   mySound = loadSound('./sounds/xylophone.mp3'); //Sounddatei aus STEP Ordner
   console.log(mySound);
@@ -79,7 +80,7 @@ const wrap = {
       x: 200, y: 250, w: 250, h: 10, color: 'red',
       trigger: (ball, blocks) => { //Trigger für Musik
         console.log("Trigger", ball, blocks); 
-        mySound.play(); //Musik wird abgespielt 
+        mySound.play(); //Klavier Sound wird abgespielt 
       }
     },
     { isStatic: true, angle: radians(10) }
@@ -141,10 +142,10 @@ for(let b = 1; b<10; b++) {
 
   // the ball has the label "Murmel" and can cause collisions (see below)
   //Magenta Ball
- ball = new Ball(
+   ball = new Ball(
     world,
     { x: 100, y: 50, r: 45, color: 'magenta' },
-    { restitution: 0.2, plugin: {wrap: wrap}, label: 'Murmel', label: 'character'},
+    { restitution: 0.2, plugin: {wrap: wrap}, label: 'Murmel'},
   );
 
   blocks.push(new BlockCore(
@@ -158,6 +159,14 @@ for(let b = 1; b<10; b++) {
     { x: 500, y: 400, w: 100, h: 10, color: 'yellow' },
     { isStatic: false, angle: radians(90), restitution: 0.5 }
   ));
+
+  //NOTE
+  //add ball with notenImage
+  // ball = new Ball(
+  //   world,
+  //   { x: 100, y: 50, r: 20, image: noteImg },
+  //   { restitution: 0.2, plugin: {wrap: wrap}, label: "Murmel", label: 'character', }
+  // );
 
   // add box with image
   blocks.push(new Block(
@@ -187,9 +196,9 @@ for(let b = 1; b<10; b++) {
    // Check if character is touching a surface (e.g. the ground) so we know when it should be able to jump
    Matter.Events.on(engine, 'collisionStart', function(event) {
     const pairs = event.pairs[0];
-    const bodyA = pairs.bodyA;
+    const bodyA = pairs.bodyA;  
     const bodyB = pairs.bodyB;
-    if (bodyA.label === "character" || bodyB.label === "character") {
+    if (bodyA.label === 'Murmel' || bodyB.label === 'Murmel') {
       characterTouchingASurface = true
     }
   });
@@ -198,7 +207,7 @@ for(let b = 1; b<10; b++) {
     const pairs = event.pairs[0];
     const bodyA = pairs.bodyA;
     const bodyB = pairs.bodyB;
-    if (bodyA.label === "character" || bodyB.label === "character") {
+    if (bodyA.label === 'Murmel' || bodyB.label === 'Murmel') {
       characterTouchingASurface = false
     }
   });
@@ -224,7 +233,7 @@ for(let b = 1; b<10; b++) {
 
 
 function draw() {
-  background(0, 20);
+  background(40);
   // animate attracted blocks
   // magnet.attract();
 
