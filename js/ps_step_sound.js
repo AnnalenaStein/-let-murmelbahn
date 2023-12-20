@@ -73,6 +73,12 @@ const wrap = {
     { x: 100, y: 150, w: 10, h: 10, color: 'grey'},
     { isStatic: true}
   ));
+//Graue Linie unter "Bar Chirmes"
+  blocks.push(new BlockCore(
+    world,
+    { x: 600, y: 450, w: 1000, h: 10, color: 'grey'},
+    { isStatic: true}
+  ));
 
   blocks.push(new BlockCore(
     world,
@@ -145,11 +151,7 @@ for(let b = 1; b<10; b++) {
    ball = new Ball(
     world,
     { x: 100, y: 50, r: 45, color: 'magenta' },
-<<<<<<< HEAD
     { restitution: 0.2, plugin: {wrap: wrap}, label: "Murmel", label: 'Murmel' }
-=======
-    { restitution: 0.2, plugin: {wrap: wrap}, label: 'Murmel'},
->>>>>>> f9af2422d43eac919b3ac843ae11edf4f3eb7573
   );
 
   blocks.push(new BlockCore(
@@ -165,20 +167,12 @@ for(let b = 1; b<10; b++) {
   ));
 
   //add ball with notenImage
-<<<<<<< HEAD
   //NOTE 
   ball = new PolygonFromSVG(
     world,
     { x: 110, y: 60,  fromFile: './img/note.svg', image: noteImg },
-    { restitution: 0.1 , plugin: {wrap: wrap}, label: "Murmel" }
+    { restitution: 0.5 , plugin: {wrap: wrap}, label: "Murmel" }
   );
-=======
-  // ball = new Ball(
-  //   world,
-  //   { x: 100, y: 50, r: 20, image: noteImg },
-  //   { restitution: 0.2, plugin: {wrap: wrap}, label: "Murmel", label: 'character', }
-  // );
->>>>>>> f9af2422d43eac919b3ac843ae11edf4f3eb7573
 
   // add box with image
   blocks.push(new Block(
@@ -210,13 +204,8 @@ for(let b = 1; b<10; b++) {
     const pairs = event.pairs[0];
     const bodyA = pairs.bodyA;  
     const bodyB = pairs.bodyB;
-<<<<<<< HEAD
     if (bodyA.label === "Murmel" || bodyB.label === "Murmel") {
       MurmelTouchingASurface = true
-=======
-    if (bodyA.label === 'Murmel' || bodyB.label === 'Murmel') {
-      characterTouchingASurface = true
->>>>>>> f9af2422d43eac919b3ac843ae11edf4f3eb7573
     }
   });
 
@@ -224,13 +213,8 @@ for(let b = 1; b<10; b++) {
     const pairs = event.pairs[0];
     const bodyA = pairs.bodyA;
     const bodyB = pairs.bodyB;
-<<<<<<< HEAD
     if (bodyA.label === "Murmel" || bodyB.label === "Murmel") {
       MurmelTouchingASurface = false
-=======
-    if (bodyA.label === 'Murmel' || bodyB.label === 'Murmel') {
-      characterTouchingASurface = false
->>>>>>> f9af2422d43eac919b3ac843ae11edf4f3eb7573
     }
   });
 
