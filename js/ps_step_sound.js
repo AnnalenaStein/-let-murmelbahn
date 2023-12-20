@@ -79,7 +79,7 @@ const wrap = {
       x: 200, y: 250, w: 250, h: 10, color: 'red',
       trigger: (ball, blocks) => { //Trigger für Musik
         console.log("Trigger", ball, blocks); 
-        mySound.play(); //Musik wird abgespielt 
+        mySound.play(); //Klavier Sound wird abgespielt 
       }
     },
     { isStatic: true, angle: radians(10) }
