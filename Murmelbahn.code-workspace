@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "STEP"
+		},
+		{
+			"path": "../Programmiertes Entwerfen/_Übung/p5-matter-examples-master"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "STEP"
+	}
+}
