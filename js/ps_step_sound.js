@@ -128,7 +128,7 @@ const wrap = {
  ball = new Ball(
     world,
     { x: 100, y: 50, r: 45, color: 'magenta' },
-    { restitution: 0.2, plugin: {wrap: wrap}, label: "Murmel", label: 'character' }
+    { restitution: 0.2, plugin: {wrap: wrap}, label: 'Murmel', label: 'character'},
   );
 
   blocks.push(new BlockCore(
