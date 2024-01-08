@@ -226,4 +226,4 @@ function keyPressed() {
       {x: (0.01 * direction) + ball.body.velocity.x / 100, y: -0.1}
     );
   }
-};
+}; //hallo
