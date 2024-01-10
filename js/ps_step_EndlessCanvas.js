@@ -26,6 +26,12 @@ let magnet;
 let MurmelTouchingASurface = false;
 let ball;
 
+let canvasElem;
+let off = { x: 0, y: 0 };
+
+ // das ist die Dimension des kompletten Levels 
+const dim = { w: 3840, h: 2160 };
+
 function preload() {
   poly = loadImage('./img/poly.png');
   noteImg = loadImage('./img/note.png');
@@ -39,6 +45,9 @@ function setup() {
   let canvas = createCanvas(windowWidth, windowHeight); //Sonst resized sich alles und die Bahn sieht anders aus
   canvas.parent('thecanvas');
   document.getElementsByClassName('overlay')[0].style.display = 'none';
+
+// Das ist nötig für den 'Endless Canvas'
+canvasElem = document.getElementById('thecanvas');
 
   engine = Engine.create();
   world = engine.world;
@@ -265,6 +274,23 @@ function draw() {
 
   blocks.forEach(block => block.draw());
   mouse.draw();
+  
+  // position canvas and translate coordinates
+  scrollEndless(murmel.body.position);
+}
+
+function scrollEndless(point) {
+  // wohin muss verschoben werden damit point wenn möglich in der Mitte bleibt
+  off = { x: Math.min(Math.max(0, point.x - windowWidth / 2), dim.w -  windowWidth), y: Math.min(Math.max(0, point.y - windowHeight / 2), dim.h -  windowHeight) };
+  // plaziert den Canvas im aktuellen Viewport
+  canvasElem.style.left = Math.round(off.x) + 'px';
+  canvasElem.style.top = Math.round(off.y) + 'px';
+  // korrigiert die Koordinaten
+  translate(-off.x, -off.y);
+  // verschiebt den ganzen Viewport
+  window.scrollTo(off.x, off.y);
+  // Matter mouse needs the offset as well
+  mouse.setOffset(off);
 }
 
 //reverse gravity
