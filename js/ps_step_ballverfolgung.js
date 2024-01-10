@@ -19,7 +19,6 @@ let drumSound;
 let triangleSound;
 let pianoSound;
 
-let propeller;
 let angle = 0;
 
 let poly, ballImg, blockImg, noteImg;
@@ -30,9 +29,9 @@ let ball;
 function preload() {
   poly = loadImage('./img/poly.png');
   noteImg = loadImage('./img/note.png');
-  soundFormats('mp3');
-  mySound = loadSound('./sounds/xylophone.mp3'); //Sounddatei aus STEP Ordner
-  console.log(mySound);
+  triangleSound = loadSound('./sounds/xylophone.mp3'); //Sounddatei aus STEP Ordner
+  console.log(triangleSound);
+  soundFormats('mp3');  
   pianoSound = loadSound('./sounds/piano.mp3')
 }
 
@@ -61,28 +60,66 @@ const wrap = {
   max: { x: width, y: height }
 };
 
+//wo stroke platzieren?
 //create some blocks
+  //Piano Balken, oben
   blocks.push(new BlockCore(
     world,
-    {
-      x: 200, y: 250, w: 250, h: 10, color: 'red',
-      trigger: (ball, blocks) => { //Trigger für Musik
-        console.log("Trigger", ball, blocks); 
-        mySound.play(); //Klavier Sound wird abgespielt 
-      }
-    },
-    { isStatic: true, angle: radians(10) }
-  ));
-
-  //Magenta Balken
-  blocks.push(new BlockCore(
-    world,
-    { x: 500, y: 400, w: 200, h: 10, color: 'magenta',
+    { x: 50, y: 100, w: 100, h: 10, color: 'white',
       trigger: (ball, blocks) => {
         pianoSound.play();
       } 
     },
-    { isStatic: true, angle: radians(10) }
+    { isStatic: true, angle: radians(-10) }
+  ));
+  //unten
+  blocks.push(new BlockCore(
+    world,
+    { x: 50, y: 750, w: 100, h: 10, color: 'white',
+      trigger: (ball, blocks) => {
+        pianoSound.play();
+      } 
+    },
+    { isStatic: true, angle: radians(-10) }
+  ));
+   //Piano Balken, oben
+   blocks.push(new BlockCore(
+    world,
+    { x: 250, y: 100, w: 100, h: 10, color: 'white',
+      trigger: (ball, blocks) => {
+        pianoSound.play();
+      } 
+    },
+    { isStatic: true, angle: radians(-10) }
+  ));
+  //unten
+  blocks.push(new BlockCore(
+    world,
+    { x: 250, y: 750, w: 100, h: 10, color: 'white',
+      trigger: (ball, blocks) => {
+        pianoSound.play();
+      } 
+    },
+    { isStatic: true, angle: radians(-10) }
+  ));
+
+   //Triangle Balken
+   blocks.push(new BlockCore(
+    world,
+    { x: 150, y: 100, w: 100, h: 10, color: 'white',
+      trigger: (ball, blocks) => {
+        triangleSound.play(); //Triangel
+      } },
+    { isStatic: true, angle: radians(-10) }
+  ));
+  //unten
+  blocks.push(new BlockCore(
+    world,
+    { x: 150, y: 750, w: 100, h: 10, color: 'white',
+      trigger: (ball, blocks) => {
+        triangleSound.play(); //Triangel
+      } },
+    { isStatic: true, angle: radians(-10) }
   ));
 
   blocks.push(new BlockCore( //unterste Linie
@@ -109,7 +146,7 @@ for(let b = 1; b<10; b++) {
   //NOTE 
   ball = new PolygonFromSVG(
     world,
-    { x: 110, y: 60,  fromFile: './img/note.svg', image: noteImg },
+    { x: 110, y: 200,  fromFile: './img/note.svg', image: noteImg },
     { restitution: 0.5 , plugin: {wrap: wrap}, label: "Murmel" }
   );
 
@@ -169,18 +206,8 @@ for(let b = 1; b<10; b++) {
   Runner.run(engine);   
 }
 
-
 function draw() {
-  background(40);
-  // animate attracted blocks
-  // magnet.attract();
-
-  // animate angle property of propeller
-  // Matter.Body.setAngle(propeller.body, angle);
-  // Matter.Body.setAngularVelocity(propeller.body, 0.15);
-  // angle += 0.07;
-
-  // propeller.draw();
+  background(225); 
   ball.draw(); 
   ceiling.draw();
   ground.draw();
