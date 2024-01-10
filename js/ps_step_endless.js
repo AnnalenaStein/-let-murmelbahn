@@ -22,7 +22,7 @@ let canvasElem;
 let off = { x: 0, y: 0 };
 
  // das ist die Dimension des kompletten Levels
- const dim = { w: 3840, h: 2160 };
+ const dim = { w: 2160, h: 1080 };
 
 function preload() {
   jazz_bg = loadImage('./img/jazz-bg.png');
@@ -41,8 +41,8 @@ function setup() {
 
     // the ball has a label and can react on collisions
     murmel = new Ball(world,
-      { x: 300, y: 100, r: 25, color: 'white' },
-      { label: "Murmel", density: 0.004, restitution: 0.5, friction: 0.0, frictionAir: 0.0 }
+      { x: 50, y: 100, r: 25, color: 'white' },
+      { label: "Murmel", density: 0.005, restitution: 0.2, friction: 0.001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
     );
     blocks.push(murmel);
 
@@ -54,14 +54,83 @@ function setup() {
    blocks.push(new BlockCore(
      world,
      {
-       x: 150, y: 250, w: 2000, h: 10, color: 'grey',
+       x: 150, y: 250, w: 300, h: 20, color: 'grey', 
        trigger: (ball, blocks) => { //Trigger für Musik
         //console.log("Trigger", ball, blocks); 
       }
     },
     { isStatic: true }
     ));
-  }
+
+   blocks.push(new BlockCore(
+    world,
+    {
+      x: 550, y: 250, w: 300, h: 20, color: 'grey',
+      trigger: (ball, blocks) => { //Trigger für Musik
+       //console.log("Trigger", ball, blocks); 
+     }
+   },
+   { isStatic: true }
+   ));
+
+   blocks.push(new BlockCore(
+    world,
+    {
+      x: 1050, y: 220, w: 500, h: 20, color: 'grey',
+      trigger: (ball, blocks) => { //Trigger für Musik
+       //console.log("Trigger", ball, blocks); 
+     }
+   },
+   { isStatic: true }
+   ));
+
+   blocks.push(new BlockCore(
+    world,
+    {
+      x: 1650, y: 200, w: 320, h: 20, color: 'grey',
+      trigger: (ball, blocks) => { //Trigger für Musik
+       //console.log("Trigger", ball, blocks); 
+     }
+   },
+   { isStatic: true }
+   ));
+
+   //Unterer Balken
+   blocks.push(new BlockCore(
+    world,
+    {
+      x: 100, y: 400, w: 2500, h: 20, color: 'grey',
+      trigger: (ball, blocks) => { //Trigger für Musik
+       //console.log("Trigger", ball, blocks); 
+     }
+   },
+   { isStatic: true }
+   ));
+
+   // Verikaler Balken
+   blocks.push(new BlockCore(
+    world,
+    {
+      x: 1900, y: 300, w: 20, h: 500, color: 'grey',
+      trigger: (ball, blocks) => { //Trigger für Musik
+       //console.log("Trigger", ball, blocks); 
+     }
+   },
+   { isStatic: true }
+   ));
+
+   blocks.push(new BlockCore(
+    world,
+    {
+      x: 1750, y: 500, w: 320, h: 20, color: 'red',
+      trigger: (ball, blocks) => { //Trigger für Musik
+       //console.log("Trigger", ball, blocks); 
+     }
+   },
+   { isStatic: true }
+   ));
+ }
+  
 
  function scrollEndless(point) {
   // wohin muss verschoben werden damit point wenn möglich in der Mitte bleibt
@@ -82,7 +151,7 @@ function keyPressed(event) {
     case 32:
       console.log("Space");
       event.preventDefault();
-      Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.2, y: -0.2   });
+      Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.18, y: -0.18  });
       // Matter. Body.scale(murmel.body, 1.5, 1.5);
       break;
     default:
