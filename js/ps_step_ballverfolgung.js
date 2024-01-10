@@ -267,13 +267,13 @@ function draw() {
   mouse.draw();
 }
 
-//reverse gravity
+//reverse gravity und Murmel geht von links nach rechts
 function keyPressed(event) {
   // is SPACE pressed?
   if (event.keyCode === 32) {
     // reverse gravity
     engine.world.gravity.y *= -1;
-    // prevent SPACE bar from scrolling page
-    event.preventDefault();
+     // prevent SPACE bar from scrolling page
+     event.preventDefault();
   }
 }
