@@ -267,13 +267,23 @@ function draw() {
   mouse.draw();
 }
 
-//reverse gravity
+//reverse gravity und Murmel geht von links nach rechts
 function keyPressed(event) {
   // is SPACE pressed?
   if (event.keyCode === 32) {
     // reverse gravity
     engine.world.gravity.y *= -1;
-    // prevent SPACE bar from scrolling page
-    event.preventDefault();
+     // prevent SPACE bar from scrolling page
+     event.preventDefault();
+
+     //ball geht nur nach rechts
+    let direction = 1; // ball runs left to right ->
+    
+     // use current direction and velocity for the jump
+     Matter.Body.applyForce(
+      ball.body,
+      {x: ball.body.position.x, y: ball.body.position.y},
+      {x: (0.02 * direction) y: -0.1}
+    );
   }
 }
