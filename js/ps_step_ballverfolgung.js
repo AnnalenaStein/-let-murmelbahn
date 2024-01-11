@@ -60,7 +60,7 @@ const wrap = {
   max: { x: width, y: height }
 };
 
-//wo stroke platzieren?
+//wo Stroke platzieren?
 //create some blocks
 //Obere Balken
   //Piano Balken, oben1

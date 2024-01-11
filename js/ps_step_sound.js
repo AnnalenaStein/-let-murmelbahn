@@ -22,13 +22,12 @@ let pianoSound;
 let propeller;
 let angle = 0;
 
-let poly, ballImg, blockImg, noteImg;
+let noteImg;
 let magnet;
 let MurmelTouchingASurface = false;
 let ball;
 
 function preload() {
-  poly = loadImage('./img/poly.png');
   noteImg = loadImage('./img/note.png');
   soundFormats('mp3');
   mySound = loadSound('./sounds/xylophone.mp3'); //Sounddatei aus STEP Ordner
