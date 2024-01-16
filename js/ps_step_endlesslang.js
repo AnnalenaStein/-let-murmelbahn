@@ -19,7 +19,6 @@ let angle = 0;
 let jazz_bg;
 let noteImg;
 let music_bg;
-let mySound;
 
 let canvasElem;
 let off = { x: 0, y: 0 };
@@ -31,10 +30,6 @@ function preload() {
   music_bg = loadImage('./img/music_lines_bg.png')
   jazz_bg = loadImage('./img/jazz-bg.png');
   noteImg = loadImage('./img/note.png');
-  soundFormats('mp3');
-  // console.log(mySound);
-  Jazz_aa1 = loadSound('./Jazz_Sound/Jazz_aa1.mp3');
-  Jazz_A2 = loadSound('./Jazz_Sound/Jazz_A2.mp3'); 
 }
 
 function setup() {
@@ -49,14 +44,8 @@ function setup() {
   world = engine.world;
 
     // the ball has a label and can react on collisions
-   // murmel = new Ball(world,
-      //{ x: 50, y: 60, r: 25, fromFile: './img/Note.svg', image: noteImg  },
-     // { label: "Murmel", density: 0.005, restitution: 0.2, friction: 0.001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
-  //  );
-   // blocks.push(murmel);
-
     murmel = new Ball(world,
-      { x: 50, y: 50, r: 25,color:'green'}, //fromFile: './img/Note.svg', image: noteImg // },
+      { x: 50, y: 60, r: 25, fromFile: './img/Note.svg', image: noteImg  },
       { label: "Murmel", density: 0.005, restitution: 0.2, friction: 0.001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
     );
     blocks.push(murmel);
@@ -78,9 +67,8 @@ function setup() {
      world,
      {
        x:0, y: 390, w: 150, h: 10, color: 'purple', 
-       trigger: (murmel, blocks) => { //Trigger für Musik
+       trigger: (ball, blocks) => { //Trigger für Musik
         //console.log("Trigger", ball, blocks); 
-        Jazz_aa1.play();
       }
     },
     { isStatic: true }
@@ -89,10 +77,9 @@ function setup() {
     blocks.push(new BlockCore(
       world,
       {
-        x:150, y: 400, w: 160, h: 10, color: 'purple', 
+        x:180, y: 400, w: 160, h: 10, color: 'purple', 
         trigger: (ball, blocks) => { //Trigger für Musik
          //console.log("Trigger", ball, blocks); 
-         Jazz_A2.play
        }
      },
      { isStatic: true }
@@ -101,12 +88,12 @@ function setup() {
      blocks.push(new BlockCore(
       world,
       {
-        x:300, y: 350, w: 160, h: 10, color: 'purple', 
+        x:270, y: 350, w: 60, h: 10, color: 'purple', 
         trigger: (ball, blocks) => { //Trigger für Musik
          //console.log("Trigger", ball, blocks); 
        }
      },
-     { isStatic: true, angle: radians(-25) }
+     { isStatic: true }
      ));
 
    blocks.push(new BlockCore(
@@ -123,7 +110,7 @@ function setup() {
    blocks.push(new BlockCore(
     world,
     {
-      x: 730, y: 330, w: 90, h: 10, color: 'purple', 
+      x: 750, y: 330, w: 60, h: 10, color: 'purple', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
      }
@@ -156,7 +143,7 @@ function setup() {
    blocks.push(new BlockCore(
     world,
     {
-      x: 1180, y: 410, w: 200, h: 10, color: 'purple', 
+      x: 1180, y: 350, w: 200, h: 10, color: 'purple', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
      }
@@ -167,12 +154,12 @@ function setup() {
    blocks.push(new BlockCore(
     world,
     {
-      x:1500, y: 360, w: 400, h: 10, color: 'purple', 
+      x:1550, y: 410, w: 120, h: 10, color: 'purple', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
      }
    },
-   { isStatic: true,angle: radians(-10) }
+   { isStatic: true }
    ));
 
    blocks.push(new BlockCore(
@@ -366,7 +353,7 @@ function keyPressed(event) {
     case 32:
       console.log("Space");
       event.preventDefault();
-      Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.03, y: -0.09  });
+      Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.18, y: -0.18  });
       // Matter. Body.scale(murmel.body, 1.5, 1.5);
       break;
     default:
