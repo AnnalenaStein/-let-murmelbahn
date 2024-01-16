@@ -20,6 +20,7 @@ let jazz_bg;
 let noteImg;
 let music_bg;
 let jazz_song;
+let A_xyl;
 
 let canvasElem;
 let off = { x: 0, y: 0 };
@@ -33,6 +34,7 @@ function preload() {
   noteImg = loadImage('./img/note.png');
   soundFormats('mp3');
   jazz_song = loadSound('./sounds/jazz_song.mp3');
+  A_xyl = loadSound('./xyl_sound/A.mp3');
 }
 
 function setup() {
@@ -94,6 +96,7 @@ function setup() {
         x: 450, y: 100, w: 100, h: 10, color: 'white', 
         trigger: (ball, blocks) => { //Trigger für Musik
          //console.log("Trigger", ball, blocks); 
+         A_xyl.play();
        }
      },
      { isStatic: true }
@@ -106,6 +109,7 @@ function setup() {
       x: 550, y: 150, w: 100, h: 10, color: 'white', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
+       A_xyl.play();
      }
    },
    { isStatic: true }
@@ -117,6 +121,7 @@ function setup() {
       x: 650, y: 200, w: 100, h: 10, color: 'white', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
+       A_xyl.play();
      }
    },
    { isStatic: true }
@@ -128,6 +133,7 @@ function setup() {
       x: 800, y: 250, w: 200, h: 10, color: 'white', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
+       A_xyl.play();
      }
    },
    { isStatic: true }
@@ -139,6 +145,7 @@ function setup() {
       x: 1500, y: 250, w: 650, h: 10, color: 'white', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
+       A_xyl.play();
      }
    },
    { isStatic: true }
