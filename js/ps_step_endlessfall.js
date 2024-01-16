@@ -25,7 +25,7 @@ let canvasElem;
 let off = { x: 0, y: 0 };
 
  // das ist die Dimension des kompletten Levels
- const dim = { w: 9432.5, h: 873.5 };
+ const dim = { w: 1900, h: 9432.5 };
 
 function preload() {
   music_bg = loadImage('./img/music_lines_bg.png')
@@ -57,7 +57,7 @@ function setup() {
 
     murmel = new Ball(world,
       { x: 50, y: 50, r: 25,color:'green'}, //fromFile: './img/Note.svg', image: noteImg // },
-      { label: "Murmel", density: 0.005, restitution: 0.2, friction: 0.001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
+      { label: "Murmel", density: 0.005, restitution: 0.6, friction: 0.0001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
     );
     blocks.push(murmel);
 
@@ -70,14 +70,14 @@ function setup() {
   // ); blocks.push(murmel);
 
       // add a mouse so that we can manipulate Matter objects
-   mouse = new Mouse(engine, canvas, { stroke: 'blue', strokeWeight: 3 });
+   mouse = new Mouse(engine, canvas, { stroke: 'orange', strokeWeight: 3 });
 
    Runner.run(engine);
    
    blocks.push(new BlockCore(
      world,
      {
-       x:0, y: 390, w: 150, h: 10, color: 'purple', 
+       x:0, y: 390, w: 150, h: 10, color: 'blue', 
        trigger: (murmel, blocks) => { //Trigger für Musik
         //console.log("Trigger", ball, blocks); 
         Jazz_aa1.play();
@@ -89,30 +89,41 @@ function setup() {
     blocks.push(new BlockCore(
       world,
       {
-        x:150, y: 400, w: 160, h: 10, color: 'purple', 
+        x:150, y: 400, w: 160, h: 10, color: 'blue', 
         trigger: (ball, blocks) => { //Trigger für Musik
          //console.log("Trigger", ball, blocks); 
          Jazz_A2.play
        }
      },
-     { isStatic: true }
+     { isStatic: true, angle: radians(2) }
      ));
 
      blocks.push(new BlockCore(
       world,
       {
-        x:300, y: 350, w: 160, h: 10, color: 'purple', 
+        x:330, y: 430, w: 200, h: 10, color: 'blue', 
         trigger: (ball, blocks) => { //Trigger für Musik
          //console.log("Trigger", ball, blocks); 
        }
      },
-     { isStatic: true, angle: radians(-25) }
+     { isStatic: true, angle: radians(3) }
      ));
 
    blocks.push(new BlockCore(
     world,
     {
-      x: 520, y: 310, w: 300, h: 10, color: 'purple',
+      x: 520, y: 310, w: 300, h: 10, color: 'blue',
+      trigger: (ball, blocks) => { //Trigger für Musik
+       //console.log("Trigger", ball, blocks); 
+     }
+   },
+   { isStatic: true, angle: radians(2)}
+   ));
+
+   blocks.push(new BlockCore(
+    world,
+    {
+      x: 730, y: 330, w: 90, h: 10, color: 'blue', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
      }
@@ -123,7 +134,7 @@ function setup() {
    blocks.push(new BlockCore(
     world,
     {
-      x: 730, y: 330, w: 90, h: 10, color: 'purple', 
+      x: 830, y: 350, w: 60, h: 10, color: 'blue', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
      }
@@ -134,40 +145,29 @@ function setup() {
    blocks.push(new BlockCore(
     world,
     {
-      x: 830, y: 350, w: 60, h: 10, color: 'purple', 
+      x:980, y: 410, w: 140, h: 10, color: 'blue', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
      }
    },
-   { isStatic: true }
+   { isStatic: true,angle: radians(-13) }
    ));
 
    blocks.push(new BlockCore(
     world,
     {
-      x:980, y: 410, w: 140, h: 10, color: 'purple', 
+      x: 880, y: 510, w: 200, h: 10, color: 'blue', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
      }
    },
-   { isStatic: true }
+   { isStatic: true, angle: radians(15) }
    ));
 
    blocks.push(new BlockCore(
     world,
     {
-      x: 1180, y: 410, w: 200, h: 10, color: 'purple', 
-      trigger: (ball, blocks) => { //Trigger für Musik
-       //console.log("Trigger", ball, blocks); 
-     }
-   },
-   { isStatic: true }
-   ));
-
-   blocks.push(new BlockCore(
-    world,
-    {
-      x:1500, y: 360, w: 400, h: 10, color: 'purple', 
+      x:1500, y: 360, w: 400, h: 10, color: 'blue', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
      }
@@ -178,7 +178,7 @@ function setup() {
    blocks.push(new BlockCore(
     world,
     {
-      x: 1790, y: 330, w: 170, h: 10, color: 'purple',
+      x: 1790, y: 330, w: 170, h: 10, color: 'blue',
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
      }
@@ -324,7 +324,7 @@ function setup() {
    blocks.push(new BlockCore(
     world,
     {
-      x: 0, y: 500, w:19432.5, h: 20, color: 'green',
+      x: 0, y: 9432, w:19432.5, h: 20, color: 'green',
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
      }
