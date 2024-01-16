@@ -57,8 +57,7 @@ function setup() {
   // ); blocks.push(murmel);
 
       // add a mouse so that we can manipulate Matter objects
-   mouse = new Mouse(engine, canvas, { stroke: 'blue', strokeWeight: 3 });
-
+  mouse = new Mouse(engine, canvas, { stroke: 'blue', strokeWeight: 3 });
    Runner.run(engine);
    
    blocks.push(new BlockCore(
@@ -172,7 +171,6 @@ function keyPressed(event) {
 
 function draw() {
   background('blue');
-
   clear();
 
   // position canvas and translate coordinates
