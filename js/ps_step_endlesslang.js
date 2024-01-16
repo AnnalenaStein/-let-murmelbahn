@@ -19,6 +19,7 @@ let angle = 0;
 let jazz_bg;
 let noteImg;
 let music_bg;
+let mySound;
 
 let canvasElem;
 let off = { x: 0, y: 0 };
@@ -30,6 +31,10 @@ function preload() {
   music_bg = loadImage('./img/music_lines_bg.png')
   jazz_bg = loadImage('./img/jazz-bg.png');
   noteImg = loadImage('./img/note.png');
+  soundFormats('mp3');
+  // console.log(mySound);
+  Jazz_aa1 = loadSound('./Jazz_Sound/Jazz_aa1.mp3');
+  Jazz_A2 = loadSound('./Jazz_Sound/Jazz_A2.mp3'); 
 }
 
 function setup() {
@@ -73,8 +78,9 @@ function setup() {
      world,
      {
        x:0, y: 390, w: 150, h: 10, color: 'purple', 
-       trigger: (ball, blocks) => { //Trigger für Musik
+       trigger: (murmel, blocks) => { //Trigger für Musik
         //console.log("Trigger", ball, blocks); 
+        Jazz_aa1.play();
       }
     },
     { isStatic: true }
@@ -86,6 +92,7 @@ function setup() {
         x:150, y: 400, w: 160, h: 10, color: 'purple', 
         trigger: (ball, blocks) => { //Trigger für Musik
          //console.log("Trigger", ball, blocks); 
+         Jazz_A2.play
        }
      },
      { isStatic: true }

@@ -18,6 +18,7 @@ let angle = 0;
 
 let jazz_bg;
 let noteImg;
+let mySound;
 
 let canvasElem;
 let off = { x: 0, y: 0 };
@@ -66,6 +67,7 @@ function setup() {
        x: 150, y: 250, w: 300, h: 20, color: 'orange', 
        trigger: (ball, blocks) => { //Trigger für Musik
         //console.log("Trigger", ball, blocks); 
+        
       }
     },
     { isStatic: true }
