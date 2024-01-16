@@ -399,7 +399,7 @@ function draw() {
 
   // propeller.draw();
   ball.draw(); 
-
+  
   blocks.forEach(block => block.draw());
   mouse.draw();
 }
