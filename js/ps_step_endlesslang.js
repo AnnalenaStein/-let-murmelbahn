@@ -33,7 +33,7 @@ function preload() {
   noteImg = loadImage('./img/note.png');
   soundFormats('mp3');
   // console.log(mySound);
-  Jazz_A1 = loadSound('./Jazz_Sound/Jazz_A1.mp3');
+  Jazz_aa1 = loadSound('./Jazz_Sound/Jazz_aa1.mp3');
   Jazz_A2 = loadSound('./Jazz_Sound/Jazz_A2.mp3'); 
 }
 
@@ -74,7 +74,7 @@ function setup() {
        x:0, y: 390, w: 150, h: 10, color: 'purple', 
        trigger: (murmel, blocks) => { //Trigger für Musik
         //console.log("Trigger", ball, blocks); 
-        Jazz_A1.play();
+        Jazz_aa1.play();
       }
     },
     { isStatic: true }
@@ -98,7 +98,6 @@ function setup() {
         x:300, y: 350, w: 160, h: 10, color: 'purple', 
         trigger: (ball, blocks) => { //Trigger für Musik
          //console.log("Trigger", ball, blocks); 
-         Jazz_A3.play
        }
      },
      { isStatic: true, angle: radians(-25) }
