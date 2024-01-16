@@ -44,8 +44,14 @@ function setup() {
   world = engine.world;
 
     // the ball has a label and can react on collisions
+   // murmel = new Ball(world,
+      //{ x: 50, y: 60, r: 25, fromFile: './img/Note.svg', image: noteImg  },
+     // { label: "Murmel", density: 0.005, restitution: 0.2, friction: 0.001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
+  //  );
+   // blocks.push(murmel);
+
     murmel = new Ball(world,
-      { x: 50, y: 60, r: 25, fromFile: './img/Note.svg', image: noteImg  },
+      { x: 50, y: 50, r: 25,color:'green'}, //fromFile: './img/Note.svg', image: noteImg // },
       { label: "Murmel", density: 0.005, restitution: 0.2, friction: 0.001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
     );
     blocks.push(murmel);
@@ -353,7 +359,7 @@ function keyPressed(event) {
     case 32:
       console.log("Space");
       event.preventDefault();
-      Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.18, y: -0.18  });
+      Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.03, y: -0.09  });
       // Matter. Body.scale(murmel.body, 1.5, 1.5);
       break;
     default:
