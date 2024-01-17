@@ -8,12 +8,12 @@ function addFields() {
     world,
     {
       x:0, y: 600, w: 2000, h: 10, color: 'red', 
-      trigger: (ball, blocks) => { //Trigger für Steuerung
+      trigger: (murmel, blocks) => { //Trigger für Steuerung
        //console.log("Trigger", ball, blocks); 
        links = false;
      }
    },
-   { isStatic: true,restitution: 0  }
+   { isStatic: true,isSensor:true, restitution: 0  }
    ));
 
 blocks.push(new BlockCore(
