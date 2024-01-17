@@ -22,7 +22,7 @@ blocks.push(new BlockCore(
     x:0, y: 390, w: 150, h: 10, color: 'green', 
     trigger: (murmel, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
-     Jazz_aa1.play();
+     //Jazz_aa1.play();
    }
  },
  { isStatic: true,restitution: 0  }
@@ -34,7 +34,7 @@ blocks.push(new BlockCore(
      x:100, y: 410, w: 160, h: 10, color: 'blue', 
      trigger: (ball, blocks) => { //Trigger für Musik
       //console.log("Trigger", ball, blocks); 
-      Jazz_A2.play
+      // Jazz_A2.play
     }
   },
   { isStatic: true, angle: radians(3) }
