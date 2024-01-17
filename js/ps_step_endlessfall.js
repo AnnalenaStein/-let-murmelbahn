@@ -75,21 +75,21 @@ function setup() {
    Runner.run(engine);
    
 
- }
-
-    // process collisions - check whether block "Murmel" hits another Block
-    Events.on(engine, 'collisionStart', function (event) {
-      var pairs = event.pairs;
-      pairs.forEach((pair, i) => {
-        if (pair.bodyA.label == 'Murmel') {
-          pair.bodyA.plugin.block.collideWith(pair.bodyB.plugin.block)
+   
+   // process collisions - check whether block "Murmel" hits another Block
+   Events.on(engine, 'collisionStart', function (event) {
+     var pairs = event.pairs;
+     pairs.forEach((pair, i) => {
+       if (pair.bodyA.label == 'Murmel') {
+         pair.bodyA.plugin.block.collideWith(pair.bodyB.plugin.block)
         }
         if (pair.bodyB.label == 'Murmel') {
           pair.bodyB.plugin.block.collideWith(pair.bodyA.plugin.block)
         }
       })
     });
-  
+    
+  }
    
   
 
