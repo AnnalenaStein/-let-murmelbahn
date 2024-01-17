@@ -21,6 +21,9 @@ let noteImg;
 let music_bg;
 let mySound;
 
+let links = true;
+let jump = true;
+
 let canvasElem;
 let off = { x: 0, y: 0 };
 
@@ -90,8 +93,6 @@ function setup() {
       })
     });
   
-   
-  
 
  function scrollEndless(point) {
   // wohin muss verschoben werden damit point wenn möglich in der Mitte bleibt
@@ -106,8 +107,7 @@ function setup() {
   // Matter mouse needs the offset as well
   mouse.setOffset(off);
 }
-let links=true
-let jump=true
+
 
 
 function keyPressed(event) {
@@ -123,9 +123,8 @@ function keyPressed(event) {
         } else {
           Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.03, y: 0.0  });         
         }
-          links = !links
+          links = !links;
       }
-      // Matter. Body.scale(murmel.body, 1.5, 1.5);
       break;
     default:
       console.log(keyCode);
