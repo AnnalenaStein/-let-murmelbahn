@@ -25,7 +25,7 @@ let canvasElem;
 let off = { x: 0, y: 0 };
 
  // das ist die Dimension des kompletten Levels
- const dim = { w: 2500, h: 9432.5 };
+ const dim = { w: 2000, h: 16000 };
 
 function preload() {
   music_bg = loadImage('./img/music_lines_bg.png')
@@ -320,17 +320,17 @@ function setup() {
    ));
    
 
-   //Unterer Balken
-   blocks.push(new BlockCore(
-    world,
-    {
-      x: 0, y: 9432, w:19432.5, h: 20, color: 'green',
-      trigger: (ball, blocks) => { //Trigger für Musik
-       //console.log("Trigger", ball, blocks); 
-     }
-   },
-   { isStatic: true }
-   ));
+  //  //Unterer Balken
+  //  blocks.push(new BlockCore(
+  //   world,
+  //   {
+  //     x: 0, y: 9432, w:19432.5, h: 20, color: 'green',
+  //     trigger: (ball, blocks) => { //Trigger für Musik
+  //      //console.log("Trigger", ball, blocks); 
+  //    }
+  //  },
+  //  { isStatic: true }
+  //  ));
 
    // Verikaler Balken
   blocks.push(new BlockCore(
