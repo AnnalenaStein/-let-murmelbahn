@@ -10,7 +10,7 @@ function addFields() {
       x:0, y: 600, w: 2000, h: 10, color: 'red', 
       trigger: (murmel, blocks) => { //Trigger für Steuerung
        //console.log("Trigger", ball, blocks); 
-       jump=false;
+       links = false;
      }
    },
    { isStatic: true,isSensor:true, restitution: 0  }
@@ -20,7 +20,7 @@ blocks.push(new BlockCore(
   world,
   {
     x:0, y: 390, w: 150, h: 10, color: 'green', 
-    trigger: (murmel, blocks) => { //Trigger für Musik
+    trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
      //Jazz_aa1.play();
    }
