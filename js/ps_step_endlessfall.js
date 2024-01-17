@@ -32,9 +32,7 @@ function preload() {
   jazz_bg = loadImage('./img/jazz-bg.png');
   noteImg = loadImage('./img/note.png');
   soundFormats('mp3');
-  // console.log(mySound);
-  Jazz_aa1 = loadSound('./Jazz_Sound/Jazz_aa1.mp3');
-  Jazz_A2 = loadSound('./Jazz_Sound/Jazz_A2.mp3'); 
+  console.log(mySound;
 }
 
 function setup() {
