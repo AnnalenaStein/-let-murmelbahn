@@ -387,4 +387,3 @@ function draw() {
   blocks.forEach(block => block.draw());
   mouse.draw();
 }
-
