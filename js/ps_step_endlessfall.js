@@ -37,7 +37,7 @@ function preload() {
   noteImg = loadImage('./img/note.png');
   lvl1_C = loadImage('./img/lvl1 C.png');
   soundFormats('mp3');
-  console.log(mySound;
+  console.log(mySound);
 }
 
 function setup() {
