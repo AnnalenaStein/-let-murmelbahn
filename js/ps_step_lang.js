@@ -19,23 +19,17 @@ let angle = 0;
 let jazz_bg;
 let noteImg;
 let music_bg;
-let mySound;
-
-let links = true;
-let jump = true;
 
 let canvasElem;
 let off = { x: 0, y: 0 };
 
  // das ist die Dimension des kompletten Levels
- const dim = { w: 2000, h: 16000 };
+ const dim = { w: 9432.5, h: 873.5 };
 
 function preload() {
   music_bg = loadImage('./img/music_lines_bg.png')
   jazz_bg = loadImage('./img/jazz-bg.png');
   noteImg = loadImage('./img/note.png');
-  soundFormats('mp3');
-  console.log(mySound;
 }
 
 function setup() {
@@ -50,15 +44,9 @@ function setup() {
   world = engine.world;
 
     // the ball has a label and can react on collisions
-   // murmel = new Ball(world,
-      //{ x: 50, y: 60, r: 25, fromFile: './img/Note.svg', image: noteImg  },
-     // { label: "Murmel", density: 0.005, restitution: 0.2, friction: 0.001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
-  //  );
-   // blocks.push(murmel);
-
     murmel = new Ball(world,
-      { x: 60, y: 60, r: 25,color:'green'}, //fromFile: './img/Note.svg', image: noteImg // },
-      { label: "Murmel", density: 0.005, restitution: 0, friction: 0.0001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
+      { x: 50, y: 60, r: 25, fromFile: './img/Note.svg', image: noteImg  },
+      { label: "Murmel", density: 0.005, restitution: 0.2, friction: 0.001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
     );
     blocks.push(murmel);
 
@@ -71,27 +59,9 @@ function setup() {
   // ); blocks.push(murmel);
 
       // add a mouse so that we can manipulate Matter objects
-   mouse = new Mouse(engine, canvas, { stroke: 'orange', strokeWeight: 3 });
-  addFields();
-   Runner.run(engine);
-   
+   mouse = new Mouse(engine, canvas, { stroke: 'blue', strokeWeight: 3 });}
 
-   
-   // process collisions - check whether block "Murmel" hits another Block
-   Events.on(engine, 'collisionStart', function (event) {
-     var pairs = event.pairs;
-     pairs.forEach((pair, i) => {
-       if (pair.bodyA.label == 'Murmel') {
-         pair.bodyA.plugin.block.collideWith(pair.bodyB.plugin.block)
-        }
-        if (pair.bodyB.label == 'Murmel') {
-          pair.bodyB.plugin.block.collideWith(pair.bodyA.plugin.block)
-        }
-      })
-    });
-    
-  }
-   
+  
   
 
  function scrollEndless(point) {
@@ -108,23 +78,13 @@ function setup() {
   mouse.setOffset(off);
 }
 
-
-
 function keyPressed(event) {
   switch (keyCode) {
     case 32:
       console.log("Space");
       event.preventDefault();
-      if(jump){
-        Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.03, y: -0.09  });
-      } else {
-        if(links){
-          Matter.Body.applyForce(murmel.body, murmel.body.position, { x: -0.03, y: 0.0  });
-        } else {
-          Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.03, y: 0.0  });         
-        }
-          links = !links;
-      }
+      Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.18, y: -0.18  });
+      // Matter. Body.scale(murmel.body, 1.5, 1.5);
       break;
     default:
       console.log(keyCode);

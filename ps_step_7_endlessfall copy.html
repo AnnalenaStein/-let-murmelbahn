@@ -35,7 +35,7 @@
 
   <!-- Javascript Programm in separater Datei -->
   <script type="text/javascript" src="js/ps_step_endlessfall.js" id="homework"></script>
-
+  <script type="text/javascript" src="js/ps_step_felderendlessfall.js" id="homework"></script>
   <!-- Styles in separater Datei -->
   <link rel="stylesheet" href="css/ps_step.css">
 </head>
@@ -75,10 +75,19 @@
 
     #sprite-background {
       position: absolute;
-      width: 2500px;
-      height: 9432.5px;
-      background: purple no-repeat;
+      width: 2000px;
+      height: 16000px;
+      background: url('./img/bg.png') no-repeat;
       z-index: -1;
+    }
+
+    #sprite-foreground {
+      position: absolute;
+      width: 2000px;
+      height: 16000px;
+      background: url('./img/fg.png') no-repeat;
+      z-index: 1;
+      pointer-events: none;
     }
 
   </style>
