@@ -1,5 +1,3 @@
-Homeworks.aufgabe = 7;
-
 const Engine = Matter.Engine;
 const Runner = Matter.Runner;
 const Bodies = Matter.Bodies;
