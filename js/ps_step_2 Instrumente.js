@@ -19,7 +19,12 @@ let angle = 0;
 let jazz_bg;
 let noteImg;
 let music_bg;
-let jazz_song;
+
+let Preludi_A1;
+let Preludi_A2;
+let Preludi_A3;
+let Preludi_A4;
+let Preludi_A5;
 
 let canvasElem;
 let off = { x: 0, y: 0 };
@@ -32,7 +37,11 @@ function preload() {
   jazz_bg = loadImage('./img/jazz-bg.png');
   noteImg = loadImage('./img/note.png');
   soundFormats('mp3');
-  jazz_song = loadSound('./sounds/jazz_song.mp3');
+  Preludi_A1 = loadSound('./Preludium/A1.mp3');
+  Preludi_A2 = loadSound('./Preludium/A2.mp3');
+  Preludi_A3 = loadSound('./Preludium/A3.mp3');
+  Preludi_A4 = loadSound('./Preludium/A4.mp3');
+  Preludi_A5 = loadSound('./Preludium/A5.mp3');
 }
 
 function setup() {
@@ -60,8 +69,6 @@ function setup() {
    mouse = new Mouse(engine, canvas, { stroke: 'blue', strokeWeight: 3 });
 
    Runner.run(engine);
-
-
    
    blocks.push(new BlockCore(
      world,
@@ -81,7 +88,7 @@ function setup() {
         trigger: (ball, blocks) => { //Trigger für Musik
           console.log("Trigger", ball, blocks); 
           // mySound.play(); //Klavier Sound wird abgespielt 
-          jazz_song.play();
+          Preludi_A1.play();
         }
       },
       { isStatic: true }
@@ -94,6 +101,7 @@ function setup() {
         x: 450, y: 100, w: 100, h: 10, color: 'white', 
         trigger: (ball, blocks) => { //Trigger für Musik
          //console.log("Trigger", ball, blocks); 
+         Preludi_A2.play();
        }
      },
      { isStatic: true }
@@ -106,6 +114,7 @@ function setup() {
       x: 550, y: 150, w: 100, h: 10, color: 'white', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
+       Preludi_A3.play();
      }
    },
    { isStatic: true }
@@ -117,6 +126,7 @@ function setup() {
       x: 650, y: 200, w: 100, h: 10, color: 'white', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
+       Preludi_A4.play();
      }
    },
    { isStatic: true }
@@ -128,6 +138,7 @@ function setup() {
       x: 800, y: 250, w: 200, h: 10, color: 'white', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
+       Preludi_A5.play();
      }
    },
    { isStatic: true }
@@ -139,6 +150,7 @@ function setup() {
       x: 1500, y: 250, w: 650, h: 10, color: 'white', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
+       Preludi_A1.play();
      }
    },
    { isStatic: true }
@@ -150,6 +162,7 @@ function setup() {
       x: 2200, y: 200, w: 400, h: 10, color: 'white',
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
+       Preludi_A2.play();
      }
    },
    { isStatic: true }
@@ -163,6 +176,7 @@ function setup() {
       x: 0, y: 500, w:19432.5, h: 20, color: 'green',
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
+       Preludi_A3.play();
      }
    },
    { isStatic: true }
@@ -175,6 +189,7 @@ function setup() {
       x: 10160, y: 300, w: 20, h: 500, color: 0,
       trigger: (ball, blocks) => { //Trigger für Musik
        console.log("Trigger", ball, blocks); 
+       Preludi_A4.play();
      }
   },
    { isStatic: true }
