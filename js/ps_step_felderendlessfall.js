@@ -88,7 +88,7 @@ blocks.push(new BlockCore(
 blocks.push(new BlockCore(
  world,
  {
-   x: 650, y: 650, w: 190, h: 10, color: 'blue', 
+   x: 650, y: 650, w: 190, h: 10, color: 'blue', //
    trigger: (ball, blocks) => { //Trigger für Musik
     //console.log("Trigger", ball, blocks); 
   }
@@ -132,7 +132,7 @@ blocks.push(new BlockCore(
 blocks.push(new BlockCore(
  world,
  {
-  x:730, y: 1360, w: 150, h: 10, color: 'turkoise', 
+  x:730, y: 1360, w: 150, h: 10, color: 'cyan', 
    trigger: (ball, blocks) => { //Trigger für Musik
     //console.log("Trigger", ball, blocks); 
   }
