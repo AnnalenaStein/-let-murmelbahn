@@ -18,6 +18,7 @@ let angle = 0;
 
 let jazz_bg;
 let noteImg;
+let lvl1_C;
 let music_bg;
 let mySound;
 
@@ -34,6 +35,7 @@ function preload() {
   music_bg = loadImage('./img/music_lines_bg.png')
   jazz_bg = loadImage('./img/jazz-bg.png');
   noteImg = loadImage('./img/note.png');
+  lvl1_C = loadImage('./img/lvl1 C.png');
   soundFormats('mp3');
   console.log(mySound;
 }
