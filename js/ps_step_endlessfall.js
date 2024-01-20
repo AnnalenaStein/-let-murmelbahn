@@ -22,6 +22,13 @@ let lvl1_C;
 let music_bg;
 let mySound;
 
+let Preludi_A1;
+let Preludi_A2;
+let Preludi_A3;
+let Preludi_A4;
+let Preludi_A5;
+
+
 let links = true;
 let jump = true;
 
@@ -37,7 +44,12 @@ function preload() {
   noteImg = loadImage('./img/note.png');
   lvl1_C = loadImage('./img/lvl1 C.png');
   soundFormats('mp3');
-  console.log(mySound;
+  console.log(mySound);
+  Preludi_A1 = loadSound('./Preludium/A1.mp3');
+  Preludi_A2 = loadSound('./Preludium/A2.mp3');
+  Preludi_A3 = loadSound('./Preludium/A3.mp3');
+  Preludi_A4 = loadSound('./Preludium/A4.mp3');
+  Preludi_A5 = loadSound('./Preludium/A5.mp3');
 }
 
 function setup() {
@@ -136,10 +148,9 @@ function keyPressed(event) {
 
 function draw() {
   background('blue');
-
   clear();
 
-  // position canvas and translate coordinates
+  //position canvas and translate coordinates
   scrollEndless(murmel.body.position);
 
   // animate attracted blocks
