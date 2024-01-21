@@ -31,7 +31,7 @@ blocks.push(new BlockCore(
  blocks.push(new BlockCore(
    world,
    {
-     x:150, y: 410, w: 100, h: 10, color: 'blue', 
+     x:150, y: 410, w: 90, h: 10, color: 'blue', 
      trigger: (ball, blocks) => { //Trigger für Musik
       //console.log("Trigger", ball, blocks); 
       Preludi_A1.play();
@@ -43,7 +43,7 @@ blocks.push(new BlockCore(
   blocks.push(new BlockCore(
    world,
    {
-     x:270, y: 460, w: 100, h: 10, color: 'blue', 
+     x:270, y: 460, w: 90, h: 10, color: 'blue', 
      trigger: (ball, blocks) => { //Trigger für Musik
       //console.log("Trigger", ball, blocks); 
       Preludi_A2.play();
@@ -56,7 +56,7 @@ blocks.push(new BlockCore(
   blocks.push(new BlockCore(
     world,
     {
-      x:440, y: 550, w: 150, h: 10, color: 'blue', 
+      x:420, y: 550, w: 100, h: 10, color: 'blue', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
        Preludi_A3.play();
@@ -93,7 +93,7 @@ blocks.push(new BlockCore(
 blocks.push(new BlockCore(
   world,
   {
-    x:800, y: 800, w: 100, h: 10, color: 'blue', 
+    x:900, y: 750, w: 100, h: 10, color: 'blue', 
     trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
      Preludi_A3.play();
@@ -105,7 +105,7 @@ blocks.push(new BlockCore(
  blocks.push(new BlockCore(
   world,
   {
-    x:530, y: 1000, w: 200, h: 10, color: 'blue', 
+    x:1050, y: 800, w: 200, h: 10, color: 'blue', 
     trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
      Preludi_A4.play();
@@ -117,7 +117,7 @@ blocks.push(new BlockCore(
  blocks.push(new BlockCore(
   world,
   {
-    x:350, y: 1200, w: 200, h: 10, color: 'blue', 
+    x:1200, y: 850, w: 200, h: 10, color: 'blue', 
     trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
      Preludi_A5.play();
