@@ -1,6 +1,3 @@
-Homeworks.aufgabe = 7;
-
-
 function addFields() {
 
 //Rote Linie ganz oben
