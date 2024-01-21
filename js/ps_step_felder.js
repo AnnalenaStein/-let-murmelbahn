@@ -340,5 +340,5 @@ blocks.push(new BlockCore(
 //  { isStatic: true }
 //  ));
 
-
+}
  
