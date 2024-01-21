@@ -43,11 +43,11 @@ function preload() {
   lvl1_C = loadImage('./img/lvl1 C.png');
   soundFormats('mp3');
   console.log(mySound);
-  Preludi_A1 = loadSound('./Preludium/A1.mp3');
-  Preludi_A2 = loadSound('./Preludium/A2.mp3');
-  Preludi_A3 = loadSound('./Preludium/A3.mp3');
-  Preludi_A4 = loadSound('./Preludium/A4.mp3');
-  Preludi_A5 = loadSound('./Preludium/A5.mp3');
+  Preludi_A1 = loadSound('./Musik/Preludium/A1.mp3');
+  Preludi_A2 = loadSound('./Musik/Preludium/A2.mp3');
+  Preludi_A3 = loadSound('./Musik/Preludium/A3.mp3');
+  Preludi_A4 = loadSound('./Musik/Preludium/A4.mp3');
+  Preludi_A5 = loadSound('./Musik/Preludium/A5.mp3');
 }
 
 function setup() {
