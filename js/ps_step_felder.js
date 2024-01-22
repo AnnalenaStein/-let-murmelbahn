@@ -8,7 +8,7 @@ function addFields() {
       trigger: (murmel, blocks) => { //Trigger für Steuerung
        //console.log("Trigger", ball, blocks); 
 
-       links = false;
+       jump = false;
      }
    },
    { isStatic: true,isSensor:true, restitution: 0  }
@@ -790,16 +790,7 @@ blocks.push(new BlockCore(
 
 //Erste Linie
 
-blocks.push(new BlockCore(
-  world,
-  {
-    x:0, y:  8000, w: 10, h: 10, color: 'blue', 
-    trigger: (ball, blocks) => { //Trigger für Musik
-     //console.log("Trigger", ball, blocks); 
-   }
- },
- { isStatic: true,angle: radians(0),restitution: 0 }
- ));
+
 
  blocks.push(new BlockCore(
   world,
@@ -1017,16 +1008,7 @@ blocks.push(new BlockCore(
    { isStatic: true,angle: radians(0),restitution: 0 }
    ));
 
-   blocks.push(new BlockCore(
-    world,
-    {
-      x:2000, y:  8000, w: 10, h: 10, color: 'blue', 
-      trigger: (ball, blocks) => { //Trigger für Musik
-       //console.log("Trigger", ball, blocks); 
-     }
-   },
-   { isStatic: true,angle: radians(0),restitution: 0 }
-   ));
+   
 
 
 
@@ -1045,16 +1027,7 @@ blocks.push(new BlockCore(
 
 
 
-blocks.push(new BlockCore(
-  world,
-  {
-    x:0*e, y:  8100, w: 10, h: 10, color: 'blue', 
-    trigger: (ball, blocks) => { //Trigger für Musik
-     //console.log("Trigger", ball, blocks); 
-   }
- },
- { isStatic: true,angle: radians(0),restitution: 0 }
- ));
+
 
  blocks.push(new BlockCore(
   world,
@@ -1443,16 +1416,7 @@ blocks.push(new BlockCore(
 
 
 
-   blocks.push(new BlockCore(
-    world,
-    {
-      x:34*e, y:  8100, w: 10, h: 10, color: 'blue', 
-      trigger: (ball, blocks) => { //Trigger für Musik
-       //console.log("Trigger", ball, blocks); 
-     }
-   },
-   { isStatic: true,angle: radians(0),restitution: 0 }
-   ));
+   
 
 
 
@@ -1463,16 +1427,7 @@ blocks.push(new BlockCore(
 
 
 
-blocks.push(new BlockCore(
-  world,
-  {
-    x:0, y:  8200, w: 10, h: 10, color: 'blue', 
-    trigger: (ball, blocks) => { //Trigger für Musik
-     //console.log("Trigger", ball, blocks); 
-   }
- },
- { isStatic: true,angle: radians(0),restitution: 0 }
- ));
+
 
  blocks.push(new BlockCore(
   world,
@@ -1667,16 +1622,7 @@ blocks.push(new BlockCore(
    { isStatic: true,angle: radians(0),restitution: 0 }
    ));
 
-   blocks.push(new BlockCore(
-    world,
-    {
-      x:1800, y:  8200, w: 10, h: 10, color: 'blue', 
-      trigger: (ball, blocks) => { //Trigger für Musik
-       //console.log("Trigger", ball, blocks); 
-     }
-   },
-   { isStatic: true,angle: radians(0),restitution: 0 }
-   ));
+   
 
 
 
@@ -1692,16 +1638,7 @@ blocks.push(new BlockCore(
    // vierte Reihe
    
 
-   blocks.push(new BlockCore(
-    world,
-    {
-      x:0*e, y:  8300, w: 10, h: 10, color: 'blue', 
-      trigger: (ball, blocks) => { //Trigger für Musik
-       //console.log("Trigger", ball, blocks); 
-     }
-   },
-   { isStatic: true,angle: radians(0),restitution: 0 }
-   ));
+  
   
    blocks.push(new BlockCore(
     world,
@@ -2028,16 +1965,7 @@ blocks.push(new BlockCore(
      ));
   
   
-     blocks.push(new BlockCore(
-      world,
-      {
-        x:29*e, y:  8300, w: 10, h: 10, color: 'blue', 
-        trigger: (ball, blocks) => { //Trigger für Musik
-         //console.log("Trigger", ball, blocks); 
-       }
-     },
-     { isStatic: true,angle: radians(0),restitution: 0 }
-     ));
+    
   
   
   
@@ -2057,16 +1985,7 @@ blocks.push(new BlockCore(
 
 
     
-     blocks.push(new BlockCore(
-      world,
-      {
-        x:100, y:  8400, w: 10, h: 10, color: 'blue', 
-        trigger: (ball, blocks) => { //Trigger für Musik
-         //console.log("Trigger", ball, blocks); 
-       }
-     },
-     { isStatic: true,angle: radians(0),restitution: 0 }
-     ));
+     
     
     
      blocks.push(new BlockCore(
@@ -2228,16 +2147,7 @@ blocks.push(new BlockCore(
        { isStatic: true,angle: radians(0),restitution: 0 }
        ));
     
-       blocks.push(new BlockCore(
-        world,
-        {
-          x:1600, y:  8400, w: 10, h: 10, color: 'blue', 
-          trigger: (ball, blocks) => { //Trigger für Musik
-           //console.log("Trigger", ball, blocks); 
-         }
-       },
-       { isStatic: true,angle: radians(0),restitution: 0 }
-       ));
+      
     
        
 
@@ -2260,16 +2170,7 @@ blocks.push(new BlockCore(
      
       
       
-       blocks.push(new BlockCore(
-        world,
-        {
-          x:3*e, y:  8500, w: 10, h: 10, color: 'blue', 
-          trigger: (ball, blocks) => { //Trigger für Musik
-           //console.log("Trigger", ball, blocks); 
-         }
-       },
-       { isStatic: true,angle: radians(0),restitution: 0 }
-       ));
+       
       
       
        blocks.push(new BlockCore(
@@ -2513,16 +2414,6 @@ blocks.push(new BlockCore(
          ));
       
       
-         blocks.push(new BlockCore(
-          world,
-          {
-            x:25*e, y:  8500, w: 10, h: 10, color: 'blue', 
-            trigger: (ball, blocks) => { //Trigger für Musik
-             //console.log("Trigger", ball, blocks); 
-           }
-         },
-         { isStatic: true,angle: radians(0),restitution: 0 }
-         ));
       
       
       
@@ -2540,17 +2431,7 @@ blocks.push(new BlockCore(
 
 
 
- blocks.push(new BlockCore(
-  world,
-  {
-    x:300, y:  8600, w: 10, h: 10, color: 'blue', 
-    trigger: (ball, blocks) => { //Trigger für Musik
-     //console.log("Trigger", ball, blocks); 
-   }
- },
- { isStatic: true,angle: radians(0),restitution: 0 }
- ));
-
+ 
 
  blocks.push(new BlockCore(
   world,
@@ -2665,16 +2546,7 @@ blocks.push(new BlockCore(
    { isStatic: true,angle: radians(0),restitution: 0 }
    ));
 
-   blocks.push(new BlockCore(
-    world,
-    {
-      x:1400, y:  8600, w: 10, h: 10, color: 'blue', 
-      trigger: (ball, blocks) => { //Trigger für Musik
-       //console.log("Trigger", ball, blocks); 
-     }
-   },
-   { isStatic: true,angle: radians(0),restitution: 0 }
-   ));
+  
 
    
 
@@ -2693,16 +2565,7 @@ blocks.push(new BlockCore(
 
 
 
- blocks.push(new BlockCore(
-  world,
-  {
-    x:4*(e*2), y:  8700, w: 10, h: 10, color: 'blue', 
-    trigger: (ball, blocks) => { //Trigger für Musik
-     //console.log("Trigger", ball, blocks); 
-   }
- },
- { isStatic: true,angle: radians(0),restitution: 0 }
- ));
+ 
 
 
  blocks.push(new BlockCore(
@@ -2762,17 +2625,6 @@ blocks.push(new BlockCore(
  { isStatic: true,angle: radians(0),restitution: 0 }
  ));
 
-  blocks.push(new BlockCore(
-    world,
-    {
-      x:10*(e*2), y:  8700, w: 10, h: 10, color: 'blue', 
-      trigger: (ball, blocks) => { //Trigger für Musik
-       //console.log("Trigger", ball, blocks); 
-     }
-   },
-   { isStatic: true,angle: radians(0),restitution: 0 }
-   ));
-
 
 
 
@@ -2788,16 +2640,7 @@ blocks.push(new BlockCore(
 
 
 
- blocks.push(new BlockCore(
-  world,
-  {
-    x:600, y:  8800, w: 10, h: 10, color: 'blue', 
-    trigger: (ball, blocks) => { //Trigger für Musik
-     //console.log("Trigger", ball, blocks); 
-   }
- },
- { isStatic: true,angle: radians(0),restitution: 0 }
- ));
+
 
 
  blocks.push(new BlockCore(
@@ -2844,16 +2687,7 @@ blocks.push(new BlockCore(
    { isStatic: true,angle: radians(0),restitution: 0 }
    ));
 
-   blocks.push(new BlockCore(
-    world,
-    {
-      x:1100, y:  8800, w: 10, h: 10, color: 'blue', 
-      trigger: (ball, blocks) => { //Trigger für Musik
-       //console.log("Trigger", ball, blocks); 
-     }
-   },
-   { isStatic: true,angle: radians(0),restitution: 0 }
-   ));
+  
 
  
 
@@ -2864,16 +2698,7 @@ blocks.push(new BlockCore(
 
    
 
-   blocks.push(new BlockCore(
-    world,
-    {
-      x:12*e, y:  8900, w: 10, h: 10, color: 'blue', 
-      trigger: (ball, blocks) => { //Trigger für Musik
-       //console.log("Trigger", ball, blocks); 
-     }
-   },
-   { isStatic: true,angle: radians(0),restitution: 0 }
-   ));
+   
 
    blocks.push(new BlockCore(
     world,
@@ -2909,17 +2734,7 @@ blocks.push(new BlockCore(
    ));
 
 
-   blocks.push(new BlockCore(
-    world,
-    {
-      x:16*e, y:  8900, w: 10, h: 10, color: 'blue', 
-      trigger: (ball, blocks) => { //Trigger für Musik
-       //console.log("Trigger", ball, blocks); 
-     }
-   },
-   { isStatic: true,angle: radians(0),restitution: 0 }
-   ));
-
+   
   
 
 
@@ -3018,6 +2833,16 @@ blocks.push(new BlockCore(
  { isStatic: true,angle: radians(30),restitution: 0 }
  ));
 
+ blocks.push(new BlockCore(
+  world,
+  {
+    x:600, y:  10000, w: 100, h: 10, color: 'purple', 
+    trigger: (ball, blocks) => { //Trigger für Musik
+     //console.log("Trigger", ball, blocks); 
+   }
+ },
+ { isStatic: true,angle: radians(10),restitution: 0.58 }
+ ));
 
 
 
