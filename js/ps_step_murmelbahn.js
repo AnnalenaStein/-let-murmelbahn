@@ -26,6 +26,8 @@ let Preludi_A3;
 let Preludi_A4;
 let Preludi_A5;
 
+let e=60
+
 
 let links = true;
 let jump = true;
@@ -34,7 +36,7 @@ let canvasElem;
 let off = { x: 0, y: 0 };
 
  // das ist die Dimension des kompletten Levels
- const dim = { w: 2000, h: 16000 };
+ const dim = { w: 1800, h: 16800 };
 
 function preload() {
   music_bg = loadImage('./img/music_lines_bg.png')
