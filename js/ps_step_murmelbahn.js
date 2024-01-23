@@ -14,6 +14,7 @@ let blocks = [];
 let murmel;
 let angle = 0;
 
+
 let jazz_bg;
 let noteImg;
 let lvl1_C;
@@ -42,7 +43,7 @@ function preload() {
   music_bg = loadImage('./img/music_lines_bg.png')
   jazz_bg = loadImage('./img/jazz-bg.png');
   noteImg = loadImage('./img/note.png');
-  lvl1_C = loadImage('./img/lvl1 C.png');
+  C_field = loadImage('./img/fields/C.png');
   soundFormats('mp3');
   console.log(mySound);
   Preludi_A1 = loadSound('./Musik/Preludium/A1.mp3');

@@ -18,7 +18,7 @@ function addFields() {
 blocks.push(new BlockCore(
   world, 
   {
-    x:0, y: 300, w: 150, h: 10, color: 'green', 
+    x:0, y: 300, w: 150, h: 10, color: 'green',
     trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
    }
