@@ -71,7 +71,7 @@ function setup() {
    // blocks.push(murmel);
 
     murmel = new Ball(world,
-      { x: 60, y: 60, r: 25,color:'green'}, //fromFile: './img/Note.svg', image: noteImg // },
+      { x: 60, y: 60, r: 25,color:'white'}, //fromFile: './img/Note.svg', image: noteImg // },
       { label: "Murmel", density: 0.005, restitution: 0, friction: 0.0001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
     );
     blocks.push(murmel);
