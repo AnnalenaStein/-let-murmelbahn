@@ -26,6 +26,16 @@ blocks.push(new BlockCore(
  { isStatic: true,restitution: 0  }
  ));
 
+ blocks.push(new BlockCore(
+  world, 
+  {
+    x:0, y: 300, w: 150, h: 10, color: 'green',
+    trigger: (ball, blocks) => { //Trigger für Musik
+     //console.log("Trigger", ball, blocks); 
+   }
+ },
+ { isStatic: true,restitution: 0  }
+ ));
 
 
 

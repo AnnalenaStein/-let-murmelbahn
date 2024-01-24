@@ -1,3 +1,5 @@
+
+
 function addFields() {
 
 //Rote Linie ganz oben
@@ -15,18 +17,63 @@ function addFields() {
    ));
 
 
+let triggerCount=0
 
  //Startblock  
-blocks.push(new BlockCore(
+ blockA = new Block(
   world, 
   {
-    x:750, y: 200, w: 150, h: 10, color: 'green',
-    trigger: (ball, blocks) => { //Trigger für Musik
-      //console.log("Trigger", ball, blocks); 
+    x:800, y: 200, w: 70, h: 10, color: 'green',
+    trigger: (ball, block) => { //Trigger für Musik
+      console.log("Trigger", ball, block);
+      
+      triggerCount++;
+      switch(triggerCount){
+        case 1:
+          Matter.Body.setAngle(block.body,radians(10))
+          break;
+      case 2:
+        Matter.Body.setAngle(block.body,radians(50))
+
+        break;
+        default:
+          
+      }
+        
     }
   },
   { isStatic: true,restitution: 0  }
-  ));
+  );
+ blocks.push(blockA);
+
+
+ blockB = new Block(
+  world, 
+  {
+    x:870, y: 200, w: 70, h: 10, color: 'green',
+    trigger: (ball, block) => { //Trigger für Musik
+      console.log("Trigger", ball, block);
+      
+      triggerCount++;
+      switch(triggerCount){
+        case 1:
+          Matter.Body.setAngle(block.body,radians(-10)) 
+      case 2:
+        Matter.Body.setAngle(block.body,radians(-50))
+
+        break;
+        default:
+          
+      }
+        
+    }
+  },
+  { isStatic: true,restitution: 0  }
+  );
+ blocks.push(blockB);
+
+
+
 
 
 
