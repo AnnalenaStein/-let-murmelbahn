@@ -38,6 +38,7 @@ blocks.push(new BlockCore(
       x: 860, y: 500, w: 200, h: 10, color: 'green', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
+       elise_A1.play();
      }
    },
    { isStatic: true,angle: radians(30),restitution: 0.58 }
@@ -51,6 +52,7 @@ blocks.push(new BlockCore(
        x: 1200, y: 650 , w: 200, h: 10, color: 'blue',
        trigger: (ball, blocks) => { //Trigger für Musik
         //console.log("Trigger", ball, blocks); 
+        elise_A2.play();
       }
     },
     { isStatic: true,angle: radians(-50),restitution: 0.58}
@@ -62,6 +64,7 @@ blocks.push(new BlockCore(
        x: 860, y: 850, w: 200, h: 10, color: 'purple', 
        trigger: (ball, blocks) => { //Trigger für Musik
         //console.log("Trigger", ball, blocks); 
+        elise_A1.play();
       }
     },
     { isStatic: true,angle: radians(30),restitution: 0.58 }
