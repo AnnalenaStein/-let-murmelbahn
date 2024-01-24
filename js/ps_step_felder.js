@@ -6,7 +6,7 @@ function addFields() {
     {
       x:0, y: 600, w: 4000, h: 10, color: 'red', 
       trigger: (murmel, blocks) => { //Trigger für Steuerung
-       //console.log("Trigger", ball, blocks); 
+       //console.log("Trigger", ball, blocks);
 
        jump = false;
      }
@@ -37,7 +37,7 @@ blocks.push(new BlockCore(
      x:150, y: 410, w: 90, h: 10, color: 'blue', 
      trigger: (ball, blocks) => { //Trigger für Musik
       //console.log("Trigger", ball, blocks); 
-      Preludi_A1.play();
+      elise_A1.play();
     }
   },
   { isStatic: true, angle: radians(3) }
@@ -49,7 +49,7 @@ blocks.push(new BlockCore(
      x:270, y: 460, w: 90, h: 10, color: 'blue', 
      trigger: (ball, blocks) => { //Trigger für Musik
       //console.log("Trigger", ball, blocks); 
-      Preludi_A2.play();
+      elise_A2.play();
     }
   },
   { isStatic: true, angle: radians(4),restitution: 0 }
@@ -62,7 +62,7 @@ blocks.push(new BlockCore(
       x:410, y: 550, w: 100, h: 10, color: 'blue', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
-       Preludi_A3.play();
+       elise_A1.play();
      }
    },
    { isStatic: true, angle: radians(10),restitution: 0 }
@@ -74,7 +74,7 @@ blocks.push(new BlockCore(
       x: 580, y: 600, w: 150, h: 10, color: 'blue', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
-       Preludi_A4.play();
+       elise_A2.play();
      }
    },
    { isStatic: true, angle: radians(4),restitution: 0 }
@@ -86,7 +86,7 @@ blocks.push(new BlockCore(
       x:750, y: 700, w: 150, h: 10, color: 'blue', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
-       Preludi_A5.play();
+       elise_A1.play();
      }
    },
    { isStatic: true, angle: radians(4),restitution: 0 }
@@ -99,7 +99,7 @@ blocks.push(new BlockCore(
     x:900, y: 750, w: 100, h: 10, color: 'blue', 
     trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
-     Preludi_A3.play();
+     elise_A3.play();
    }
  },
  { isStatic: true, angle: radians(3),restitution: 0 }
@@ -111,7 +111,7 @@ blocks.push(new BlockCore(
     x:1050, y: 800, w: 200, h: 10, color: 'blue', 
     trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
-     Preludi_A4.play();
+     elise_A4.play();
    }
  },
  { isStatic: true, angle: radians(5),restitution: 0 }
@@ -123,7 +123,7 @@ blocks.push(new BlockCore(
     x:1200, y: 850, w: 200, h: 10, color: 'blue', 
     trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
-     Preludi_A5.play();
+     elise_A5.play();
    }
  },
  { isStatic: true, angle: radians(3),restitution: 0 }

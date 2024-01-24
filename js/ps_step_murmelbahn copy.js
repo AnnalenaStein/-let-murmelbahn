@@ -18,9 +18,8 @@ let angle = 0;
 let jazz_bg;
 let noteImg;
 let lvl1_C;
-let music_bg;
-let mySound;
 
+let mySound;
 let elise_A1;
 let elise_A2;
 let elise_A3;
@@ -45,7 +44,6 @@ function preload() {
   noteImg = loadImage('./img/note.png');
   C_field = loadImage('./img/fields/C.png');
   soundFormats('mp3');
-  console.log(mySound);
   elise_A1 = loadSound('./Musik/FürElise/A1_D3#.mp3');
   elise_A2 = loadSound('./Musik/FürElise/A2_E3.mp3');
   elise_A3 = loadSound('./Musik/FürElise/A3_B2.mp3');
@@ -131,7 +129,7 @@ function keyPressed(event) {
       console.log("Space");
       event.preventDefault();
       if(jp){
-        Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.03, y: -0.09  });
+        Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.03, y: -0.09 });
       } else {
         if(links){
           Matter.Body.applyForce(murmel.body, murmel.body.position, { x: -0.03, y: 0.0  });
