@@ -8,7 +8,7 @@ function addFields() {
     {
       x:0, y: 600, w: 4000, h: 10, color: 'red', 
       trigger: (murmel, blocks) => { //Trigger für Steuerung
-       //console.log("Trigger", ball, blocks);
+       //console.log("Trigger", ball, blocks); 
 
        jump = false;
      }
@@ -85,7 +85,6 @@ let triggerCount=0
       x: 860, y: 500, w: 200, h: 10, color: 'green', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
-       elise_A1.play();
      }
    },
    { isStatic: true,angle: radians(30),restitution: 0.58 }
@@ -99,7 +98,6 @@ let triggerCount=0
        x: 1200, y: 650 , w: 200, h: 10, color: 'blue',
        trigger: (ball, blocks) => { //Trigger für Musik
         //console.log("Trigger", ball, blocks); 
-        elise_A2.play();
       }
     },
     { isStatic: true,angle: radians(-50),restitution: 0.58}
@@ -111,7 +109,6 @@ let triggerCount=0
        x: 860, y: 850, w: 200, h: 10, color: 'purple', 
        trigger: (ball, blocks) => { //Trigger für Musik
         //console.log("Trigger", ball, blocks); 
-        elise_A1.play();
       }
     },
     { isStatic: true,angle: radians(30),restitution: 0.58 }
@@ -126,21 +123,24 @@ let triggerCount=0
         x: 1150, y: 1080, w: 200, h: 10, color: 'green', 
         trigger: (ball, blocks) => { //Trigger für Musik
           //console.log("Trigger", ball, blocks); 
-          elise_A2.play();
         }
       },
       { isStatic: true, angle: radians(-40),restitution: 0.58}
       ));
       
+      
 
-//Treppe
+      
+      //Treppe
+      
+       
+      
        blocks.push(new BlockCore(
         world,
         {
           x:820, y: 1300, w: 100, h: 10, color: 'orange', 
           trigger: (ball, blocks) => { //Trigger für Musik
            //console.log("Trigger", ball, blocks); 
-           elise_A1.play();
          }
        },
        { isStatic: true,angle: radians(30),restitution: 0 }
@@ -152,7 +152,6 @@ let triggerCount=0
           x:920, y: 1420, w: 100, h: 10, color: 'orange', 
           trigger: (ball, blocks) => { //Trigger für Musik
            //console.log("Trigger", ball, blocks); 
-           elise_A3.play();
          }
        },
        { isStatic: true,angle: radians(30),restitution: 0 }
@@ -164,7 +163,6 @@ let triggerCount=0
           x:1020, y: 1520, w: 100, h: 10, color: 'orange', 
           trigger: (ball, blocks) => { //Trigger für Musik
            //console.log("Trigger", ball, blocks); 
-           elise_A4.play();
          }
        },
        { isStatic: true,angle: radians(30),restitution: 0 }
@@ -185,9 +183,22 @@ let triggerCount=0
      blocks.push(new BlockCore(
       world,
       {
-        x:800, y: 1960, w: 100, h: 10, color: 'yellow', 
+        x:1020, y: 1810, w: 200, h: 10, color: 'yellow', 
         trigger: (ball, blocks) => { //Trigger für Musik
          //console.log("Trigger", ball, blocks); 
+         elise_A1.play();
+       }
+     },
+     { isStatic: true,angle: radians(-10),restitution: 0 }
+     ));
+     
+     blocks.push(new BlockCore(
+      world,
+      {
+        x:800, y: 1960, w: 100, h: 10, color: 'yellow', 
+        trigger: (ball, blocks) => { //Trigger für Musik
+         //console.log("Trigger", ball, blocks);
+         elise_A2.play(); 
        }
      },
      { isStatic: true,angle: radians(-15),restitution: 0 }
@@ -199,6 +210,7 @@ let triggerCount=0
         x:660, y: 2040, w: 100, h: 10, color: 'yellow', 
         trigger: (ball, blocks) => { //Trigger für Musik
          //console.log("Trigger", ball, blocks); 
+         elise_A3.play();
        }
      },
      { isStatic: true,angle: radians(-15),restitution: 0 }
@@ -217,31 +229,6 @@ let triggerCount=0
      },
      { isStatic: true,angle: radians(-5),restitution: 0 }
      ));
-    
-    
-
-
-
-
-    
-    
-
-
-
-
-
-
-
- blocks.push(new BlockCore(
-  world,
-  {
-    x:1200, y: 1610, w: 200, h: 10, color: 'orange', 
-    trigger: (ball, blocks) => { //Trigger für Musik
-     //console.log("Trigger", ball, blocks); 
-   }
- },
- { isStatic: true,angle: radians(-15),restitution: 0 }
- ));
 
  
 

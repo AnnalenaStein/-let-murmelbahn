@@ -25,6 +25,38 @@ let elise_A2;
 let elise_A3;
 let elise_A4;
 let elise_A5;
+let elise_A6;
+let elise_B1;
+let elise_B2;
+let elise_B3;
+let elise_B4;
+let elise_B5;
+let elise_B6;
+let elise_B7;
+let elise_C1;
+let elise_C2;
+let elise_C3;
+let elise_C4;
+let elise_C5;
+let elise_C6;
+let elise_C7;
+let elise_D1;
+let elise_D2;
+let elise_D3;
+let elise_E1;
+let elise_E2;
+let elise_E3;
+let elise_E4;
+let elise_F1;
+let elise_F2;
+let elise_F3;
+let elise_F4;
+let elise_F5;
+let elise_F6;
+let elise_F7;
+let elise_F8;
+
+
 
 let e = 60;
 
@@ -49,6 +81,35 @@ function preload() {
   elise_A3 = loadSound('./Musik/FürElise/A3_B2.mp3');
   elise_A4 = loadSound('./Musik/FürElise/A4_D3.mp3');
   elise_A5 = loadSound('./Musik/FürElise/A5_C3.mp3');
+  elise_A6 = loadSound('./Musik/FürElise/A6_A2.mp3');
+  elise_B1 = loadSound('./Musik/FürElise/B1_A1.mp3');
+  elise_B2 = loadSound('./Musik/FürElise/B2_E2.mp3');
+  elise_B3 = loadSound('./Musik/FürElise/B3_A2.mp3');
+  elise_B4 = loadSound('./Musik/FürElise/B4_C3.mp3');
+  elise_B5 = loadSound('./Musik/FürElise/B5_E3.mp3');
+  elise_B6 = loadSound('./Musik/FürElise/B6_A3.mp3');
+  elise_B7 = loadSound('./Musik/FürElise/B7_B3.mp3');
+  elise_C2 = loadSound('./Musik/FürElise/C1_D0.mp3');
+  elise_C3 = loadSound('./Musik/FürElise/C2_D1.mp3');
+  elise_C4 = loadSound('./Musik/FürElise/C4_G1x.mp3');
+  elise_C5 = loadSound('./Musik/FürElise/C5_D2.mp3');
+  elise_C6 = loadSound('./Musik/FürElise/C6_G2x.mp3');
+  elise_C7 = loadSound('./Musik/FürElise/C7_B2.mp3');
+  elise_D1 = loadSound('./Musik/FürElise/D1_C3.mp3');
+  elise_D2 = loadSound('./Musik/FürElise/D2_B2.mp3');
+  elise_D3 = loadSound('./Musik/FürElise/D3_A2.mp3');
+  elise_E1 = loadSound('./Musik/FürElise/E1_B2.mp3');
+  elise_E2 = loadSound('./Musik/FürElise/E2_C3.mp3');
+  elise_E3 = loadSound('./Musik/FürElise/E3_D3.mp3');
+  elise_E4 = loadSound('./Musik/FürElise/E4_E3.mp3');
+  elise_F1 = loadSound('./Musik/FürElise/F1_F3.mp3');
+  elise_F2 = loadSound('./Musik/FürElise/F2_E3.mp3');
+  elise_F3 = loadSound('./Musik/FürElise/F3_D3.mp3');
+  elise_F4 = loadSound('./Musik/FürElise/F4_C3.mp3');
+  elise_F5 = loadSound('./Musik/FürElise/F5_B2.mp3');
+  elise_F6 = loadSound('./Musik/FürElise/F6_E2.mp3');
+  elise_F7 = loadSound('./Musik/FürElise/F7_E3.mp3');
+  elise_F8 = loadSound('./Musik/FürElise/F8_E4.mp3');
 }
 
 function setup() {
