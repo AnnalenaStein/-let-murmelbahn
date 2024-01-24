@@ -73,9 +73,7 @@ function preload() {
   music_bg = loadImage('./img/music_lines_bg.png')
   jazz_bg = loadImage('./img/jazz-bg.png');
   noteImg = loadImage('./img/note.png');
-  C_field = loadImage('./img/fields/C.png');
   soundFormats('mp3');
-  console.log(mySound);
   elise_A1 = loadSound('./Musik/FürElise/A1_D3x.mp3');
   elise_A2 = loadSound('./Musik/FürElise/A2_E3.mp3');
   elise_A3 = loadSound('./Musik/FürElise/A3_B2.mp3');
@@ -132,6 +130,7 @@ function setup() {
 
     murmel = new Ball(world,
       { x: 800, y: 0, r: 25, color:'white'}, //fromFile: './img/Note.svg', image: noteImg // },
+      { x: 800, y: 0, r: 25, color: 'white'}, //fromFile: './img/Note.svg', image: noteImg // },
       { label: "Murmel", density: 0.005, restitution: 0, friction: 0.0001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
     );
     blocks.push(murmel);
@@ -217,4 +216,3 @@ function draw() {
   blocks.forEach(block => block.draw());
   mouse.draw();
 }
-
