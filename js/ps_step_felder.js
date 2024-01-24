@@ -122,14 +122,26 @@ blocks.push(new BlockCore(
        },
        { isStatic: true,angle: radians(30),restitution: 0 }
        ));
-      
+
+      blocks.push(new BlockCore(
+        world,
+        {
+          x:1200, y: 1610, w: 200, h: 10, color: 'orange', 
+          trigger: (ball, blocks) => { //Trigger für Musik
+           //console.log("Trigger", ball, blocks); 
+           elise_A5.play();
+         }
+       },
+       { isStatic: true,angle: radians(-15),restitution: 0 }
+       ));
+
      blocks.push(new BlockCore(
       world,
       {
         x:1020, y: 1810, w: 200, h: 10, color: 'yellow', 
         trigger: (ball, blocks) => { //Trigger für Musik
          //console.log("Trigger", ball, blocks); 
-         elise_A5.play();
+         elise_A1.play();
        }
      },
      { isStatic: true,angle: radians(-10),restitution: 0 }
@@ -140,7 +152,8 @@ blocks.push(new BlockCore(
       {
         x:800, y: 1960, w: 100, h: 10, color: 'yellow', 
         trigger: (ball, blocks) => { //Trigger für Musik
-         //console.log("Trigger", ball, blocks); 
+         //console.log("Trigger", ball, blocks);
+         elise_A2.play(); 
        }
      },
      { isStatic: true,angle: radians(-15),restitution: 0 }
@@ -152,6 +165,7 @@ blocks.push(new BlockCore(
         x:660, y: 2040, w: 100, h: 10, color: 'yellow', 
         trigger: (ball, blocks) => { //Trigger für Musik
          //console.log("Trigger", ball, blocks); 
+         elise_A3.play();
        }
      },
      { isStatic: true,angle: radians(-15),restitution: 0 }
@@ -170,31 +184,6 @@ blocks.push(new BlockCore(
      },
      { isStatic: true,angle: radians(-5),restitution: 0 }
      ));
-    
-    
-
-
-
-
-    
-    
-
-
-
-
-
-
-
- blocks.push(new BlockCore(
-  world,
-  {
-    x:1200, y: 1610, w: 200, h: 10, color: 'orange', 
-    trigger: (ball, blocks) => { //Trigger für Musik
-     //console.log("Trigger", ball, blocks); 
-   }
- },
- { isStatic: true,angle: radians(-15),restitution: 0 }
- ));
 
  
 
