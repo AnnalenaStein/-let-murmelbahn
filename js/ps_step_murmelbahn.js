@@ -46,7 +46,7 @@ function preload() {
   C_field = loadImage('./img/fields/C.png');
   soundFormats('mp3');
   console.log(mySound);
-  elise_A1 = loadSound('./Musik/FürElise/A1_D3#.mp3');
+  elise_A1 = loadSound('./Musik/FürElise/A1_D3x.mp3');
   elise_A2 = loadSound('./Musik/FürElise/A2_E3.mp3');
   elise_A3 = loadSound('./Musik/FürElise/A3_B2.mp3');
   elise_A4 = loadSound('./Musik/FürElise/A4_D3.mp3');
@@ -54,12 +54,12 @@ function preload() {
 }
 
 function setup() {
-  docent.getElementsByClassName('overlay')[0].style.display = 'none';
+  document.getElementsByClassName('overlay')[0].style.display = 'none';
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('thecanvas');
 
   // Das ist nötig für den 'Endless Canvas'
-  canvasElem = docent.getElementById('thecanvas');
+  canvasElem = document.getElementById('thecanvas');
 
   engine = Engine.create();
   world = engine.world;
