@@ -18,12 +18,10 @@ let blockA;
 let blockB;
 
 
-let jazz_bg;
 let noteImg;
 let lvl1_C;
 let music_bg;
 
-let mySound;
 let elise_A1;
 let elise_A2;
 let elise_A3;
@@ -117,8 +115,6 @@ class Explode {
 }
 
 function preload() {
-  music_bg = loadImage('./img/music_lines_bg.png')
-  jazz_bg = loadImage('./img/jazz-bg.png');
   noteImg = loadImage('./img/note.png');
   soundFormats('mp3');
   elise_A1 = loadSound('./Musik/FürElise/A1_D3x.mp3');
@@ -177,7 +173,7 @@ function setup() {
    // blocks.push(murmel);
 
     murmel = new Ball(world,
-      { x: 835, y: 0, r: 25, color:'white'}, //fromFile: './img/Note.svg', image: noteImg // },
+      { x: 835, y: 0, r: 25, color: 'white'}, //fromFile: './img/Note.svg', image: noteImg // },
       { label: "Murmel", density: 0.005, restitution: 0, friction: 0.0001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
     );
     blocks.push(murmel);
