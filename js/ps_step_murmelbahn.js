@@ -11,12 +11,14 @@ let mouse;
 let isDrag = false;
 // an array to contain all the blocks created
 let blocks = [];
+let explodes = [];
 let murmel;
 let angle = 0;
 
 let blockA;
 let blockB;
 
+let boom;
 
 let noteImg;
 let lvl1_C;
@@ -104,6 +106,8 @@ class Explode {
       if (this.shards.length > 0) {
         this.shards.forEach((shard) => shard.draw())
         this.shards = this.shards.filter((shard) => shard.size > 0)
+      } else {
+        this.exploded = true;
       }
   }
 
@@ -190,8 +194,8 @@ function setup() {
    mouse = new Mouse(engine, canvas, { stroke: 'orange', strokeWeight: 3 });
   addFields();
   
-  ex = new Explode({pos:{x: 100, y: 100}, color: 'red'});
-  ex.boom()
+  //ex = new Explode({pos:{x: 100, y: 100}, color: 'red'});
+  //ex.boom()
 
 
    Runner.run(engine);
@@ -256,13 +260,14 @@ function keyPressed(event) {
 function draw() {
   background('blue');
   clear();
-  ex.draw();
+  //ex.draw();
 
   //position canvas and translate coordinates
   scrollEndless(murmel.body.position);
 
   // animate attracted blocks
   blocks.forEach(block => block.draw());
+  explodes.forEach(ex => ex.draw());
   mouse.draw();
 }
 

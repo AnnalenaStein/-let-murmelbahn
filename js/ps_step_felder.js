@@ -26,16 +26,25 @@ let triggerCount=0
     x:800, y: 200, w: 70, h: 10, color: 'green',
     trigger: (ball, block) => { //Trigger für Musik
       console.log("Trigger", ball, block);
-      
+      let ex
       triggerCount++;
       switch(triggerCount){
         case 1:
-          Matter.Body.setAngle(block.body,radians(10))
+          ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+          explodes.push(ex);
+          ex.boom();
+          console.log('yippie boom') 
+          //Matter.Body.setAngle(block.body,radians(10))
           break;
       case 2:
         Matter.Body.setAngle(block.body,radians(50))
 
         break;
+        case 3: 
+        ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+        explodes.push(ex);
+        ex.boom();
+      break;
         default:
           
       }
@@ -53,15 +62,24 @@ let triggerCount=0
     x:870, y: 200, w: 70, h: 10, color: 'green',
     trigger: (ball, block) => { //Trigger für Musik
       console.log("Trigger", ball, block);
-      
+      let ex;
       triggerCount++;
       switch(triggerCount){
         case 1:
-          Matter.Body.setAngle(block.body,radians(-10)) 
+          ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+          explodes.push(ex);
+          ex.boom();
+        console.log('yippie boom') 
+          //Matter.Body.setAngle(block.body,radians(-10)) 
       case 2:
         Matter.Body.setAngle(block.body,radians(-50))
 
         break;
+        case 3: 
+        ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+        explodes.push(ex);
+        ex.boom();
+      break;
         default:
           
       }
