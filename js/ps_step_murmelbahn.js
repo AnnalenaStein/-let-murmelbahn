@@ -14,11 +14,8 @@ let blocks = [];
 let murmel;
 let angle = 0;
 
-
-let jazz_bg;
 let noteImg;
 let lvl1_C;
-let music_bg;
 
 let mySound;
 let elise_A1;
