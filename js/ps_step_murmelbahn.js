@@ -89,8 +89,8 @@ function preload() {
   elise_B5 = loadSound('./Musik/FürElise/B5_E3.mp3');
   elise_B6 = loadSound('./Musik/FürElise/B6_A3.mp3');
   elise_B7 = loadSound('./Musik/FürElise/B7_B3.mp3');
-  elise_C2 = loadSound('./Musik/FürElise/C1_D0.mp3');
-  elise_C3 = loadSound('./Musik/FürElise/C2_D1.mp3');
+  elise_C1 = loadSound('./Musik/FürElise/C1_D0.mp3');
+  elise_C2 = loadSound('./Musik/FürElise/C2_D1.mp3');
   elise_C4 = loadSound('./Musik/FürElise/C4_G1x.mp3');
   elise_C5 = loadSound('./Musik/FürElise/C5_D2.mp3');
   elise_C6 = loadSound('./Musik/FürElise/C6_G2x.mp3');
@@ -131,7 +131,7 @@ function setup() {
    // blocks.push(murmel);
 
     murmel = new Ball(world,
-      { x: 60, y: 60, r: 25,color:'white'}, //fromFile: './img/Note.svg', image: noteImg // },
+      { x: 800, y: 0, r: 25, color:'white'}, //fromFile: './img/Note.svg', image: noteImg // },
       { label: "Murmel", density: 0.005, restitution: 0, friction: 0.0001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
     );
     blocks.push(murmel);
