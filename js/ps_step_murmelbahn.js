@@ -11,13 +11,18 @@ let mouse;
 let isDrag = false;
 // an array to contain all the blocks created
 let blocks = [];
+let explodes = [];
 let murmel;
 let angle = 0;
+
+let blockA;
+let blockB;
+
+let boom;
 
 let noteImg;
 let lvl1_C;
 
-let mySound;
 let elise_A1;
 let elise_A2;
 let elise_A3;
@@ -66,9 +71,53 @@ let off = { x: 0, y: 0 };
  // das ist die Dimension des kompletten Levels
  const dim = { w: 1800, h: 16800 };
 
+ class Particle {
+  constructor(pos, color) {
+    this.pos = pos;
+    this.color = color;
+    this.size = 30;
+    this.rotate = 0;
+    this.move = { x: random(-10, 10), y: random(-10, 10) };
+  }
+
+  draw() {
+    push();
+    fill(this.color);
+    translate(this.pos.x, this.pos.y);
+    rotate(this.rotate += random(0, 0.5));
+    ellipse(0, 0, this.size, this.size);
+    pop();
+    this.pos.x += this.move.x;
+    this.pos.y += this.move.y;
+    this.size -= 1;
+  }
+}
+
+class Explode {
+
+  constructor(attributes) {
+    this.attributes = attributes;
+    this.shards = [];
+    this.exploded = false;
+  }
+
+  draw() {
+      if (this.shards.length > 0) {
+        this.shards.forEach((shard) => shard.draw())
+        this.shards = this.shards.filter((shard) => shard.size > 0)
+      } else {
+        this.exploded = true;
+      }
+  }
+
+  boom() {
+    for (let s = 0; s < 30; s++) {
+      this.shards.push(new Particle({ x: this.attributes.pos.x, y: this.attributes.pos.y }, this.attributes.color));
+    }
+  }
+}
+
 function preload() {
-  music_bg = loadImage('./img/music_lines_bg.png')
-  jazz_bg = loadImage('./img/jazz-bg.png');
   noteImg = loadImage('./img/note.png');
   soundFormats('mp3');
   elise_A1 = loadSound('./Musik/FürElise/A1_D3x.mp3');
@@ -107,6 +156,7 @@ function preload() {
   elise_F8 = loadSound('./Musik/FürElise/F8_E4.mp3');
 }
 
+let ex;
 function setup() {
   document.getElementsByClassName('overlay')[0].style.display = 'none';
   let canvas = createCanvas(windowWidth, windowHeight);
@@ -126,7 +176,7 @@ function setup() {
    // blocks.push(murmel);
 
     murmel = new Ball(world,
-      { x: 800, y: 0, r: 25, color:'white'}, //fromFile: './img/Note.svg', image: noteImg // },
+      { x: 835, y: 0, r: 25, color: 'white'}, //fromFile: './img/Note.svg', image: noteImg // },
       { label: "Murmel", density: 0.005, restitution: 0, friction: 0.0001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
     );
     blocks.push(murmel);
@@ -142,6 +192,11 @@ function setup() {
       // add a mouse so that we can manipulate Matter objects
    mouse = new Mouse(engine, canvas, { stroke: 'orange', strokeWeight: 3 });
   addFields();
+  
+  //ex = new Explode({pos:{x: 100, y: 100}, color: 'red'});
+  //ex.boom()
+
+
    Runner.run(engine);
    
 
@@ -185,7 +240,7 @@ function keyPressed(event) {
       console.log("Space");
       event.preventDefault();
       if(jp){
-        Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.03, y: -0.09  });
+        Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.00, y: -0.09  });
       } else {
         if(links){
           Matter.Body.applyForce(murmel.body, murmel.body.position, { x: -0.03, y: 0.0  });
@@ -204,11 +259,14 @@ function keyPressed(event) {
 function draw() {
   background('blue');
   clear();
+  //ex.draw();
 
   //position canvas and translate coordinates
   scrollEndless(murmel.body.position);
 
   // animate attracted blocks
   blocks.forEach(block => block.draw());
+  explodes.forEach(ex => ex.draw());
   mouse.draw();
 }
+

@@ -1,3 +1,5 @@
+
+
 function addFields() {
 
 //Rote Linie ganz oben
@@ -15,18 +17,111 @@ function addFields() {
    ));
 
 
+let triggerCount=-0.5
 
  //Startblock  
-blocks.push(new BlockCore(
+ blockA = new Block(
   world, 
   {
-    x:740, y: 150, w: 150, h: 10, color: 'green',
-    trigger: (ball, blocks) => { //Trigger für Musik
-      //console.log("Trigger", ball, blocks); 
+    x:800, y: 200, w: 70, h: 10, color: 'green',
+    trigger: (ball, block) => { //Trigger für Musik
+      console.log("Trigger", ball, block);
+      let ex
+      triggerCount++;
+      switch(triggerCount){
+        case 1.5:
+         // ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+         // explodes.push(ex);
+         // ex.boom();
+         // console.log('yippie boom') 
+          Matter.Body.setAngle(block.body,radians(10))
+          break;
+      case 2.5:
+       // ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+       // explodes.push(ex);
+       // ex.boom();
+       // console.log('yippie boom') 
+        Matter.Body.setAngle(block.body,radians(50))
+
+        break;
+        case 3.5: 
+       // ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+       // explodes.push(ex);
+      //  ex.boom();
+        Matter.Body.setAngle(block.body,radians(50))
+      break;
+      case 4.5: 
+      ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+      explodes.push(ex);
+      ex.boom();
+      Matter.Body.setAngle(block.body,radians(-100))
+      //this.attributes.noStroke();
+      //this.attributes.color=('#372254');
+      //color0;
+      //blockA.attributes.noStroke();
+      blockA.attributes.color=('#372254');
+    break;
+        default:
+          
+      }
+        
     }
   },
   { isStatic: true,restitution: 0  }
-  ));
+  );
+ blocks.push(blockA);
+
+
+ let triggerCountt=-0.5
+
+ blockB = new Block(
+  world, 
+  {
+    x:870, y: 200, w: 70, h: 10, color: 'green',
+    trigger: (ball, block) => { //Trigger für Musik
+      console.log("Trigger", ball, block);
+      let ex;
+      triggerCountt++;
+      switch(triggerCountt){
+        case 1.5:
+         // ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+          //explodes.push(ex);
+         // ex.boom();
+       // console.log('yippie boom') 
+          Matter.Body.setAngle(block.body,radians(-10)) 
+      case 2.5:
+       // ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+       // explodes.push(ex);
+       // ex.boom();
+      //console.log('yippie boom') 
+       // Matter.Body.setAngle(block.body,radians(-50))
+
+        break;
+        case 3.5: 
+        //ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+       // explodes.push(ex);
+       // ex.boom();
+        Matter.Body.setAngle(block.body,radians(-50))
+      break;
+      case 4.5: 
+      ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+      explodes.push(ex);
+      ex.boom();
+      Matter.Body.setAngle(block.body,radians(-100))
+      blockB.attributes.color=('#372254');
+    break;
+        default:
+          
+      }
+        
+    }
+  },
+  { isStatic: true,restitution: 0  }
+  );
+ blocks.push(blockB);
+
+
+
 
 
 
