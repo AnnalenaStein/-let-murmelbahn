@@ -548,7 +548,7 @@ blocks.push(new BlockCore(
  { isStatic: true,angle: radians(10),restitution: 0 }
  ));
 
- //Ab hier ist noch Chaos
+ //Ab hier ist noch Chaos.
  //Teil B
       blocks.push(new BlockCore(
         world,
