@@ -30,21 +30,32 @@ let triggerCount=0
       triggerCount++;
       switch(triggerCount){
         case 1:
-          ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
-          explodes.push(ex);
-          ex.boom();
-          console.log('yippie boom') 
-          //Matter.Body.setAngle(block.body,radians(10))
+         // ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+         // explodes.push(ex);
+         // ex.boom();
+         // console.log('yippie boom') 
+          Matter.Body.setAngle(block.body,radians(10))
           break;
       case 2:
-        Matter.Body.setAngle(block.body,radians(50))
+        ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+        explodes.push(ex);
+        ex.boom();
+        console.log('yippie boom') 
+       // Matter.Body.setAngle(block.body,radians(50))
 
         break;
         case 3: 
         ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
         explodes.push(ex);
         ex.boom();
+        Matter.Body.setAngle(block.body,radians(50))
       break;
+      case 4: 
+      ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+      explodes.push(ex);
+      ex.boom();
+      Matter.Body.setAngle(block.body,radians(-100))
+    break;
         default:
           
       }
@@ -56,6 +67,8 @@ let triggerCount=0
  blocks.push(blockA);
 
 
+ let triggerCountt=0
+
  blockB = new Block(
   world, 
   {
@@ -63,23 +76,34 @@ let triggerCount=0
     trigger: (ball, block) => { //Trigger für Musik
       console.log("Trigger", ball, block);
       let ex;
-      triggerCount++;
-      switch(triggerCount){
+      triggerCountt++;
+      switch(triggerCountt){
         case 1:
-          ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
-          explodes.push(ex);
-          ex.boom();
-        console.log('yippie boom') 
-          //Matter.Body.setAngle(block.body,radians(-10)) 
+         // ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+          //explodes.push(ex);
+         // ex.boom();
+       // console.log('yippie boom') 
+          Matter.Body.setAngle(block.body,radians(-10)) 
       case 2:
-        Matter.Body.setAngle(block.body,radians(-50))
+        ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+        explodes.push(ex);
+        ex.boom();
+      console.log('yippie boom') 
+       // Matter.Body.setAngle(block.body,radians(-50))
 
         break;
         case 3: 
         ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
         explodes.push(ex);
         ex.boom();
+        Matter.Body.setAngle(block.body,radians(-50))
       break;
+      case 4: 
+      ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+      explodes.push(ex);
+      ex.boom();
+      Matter.Body.setAngle(block.body,radians(-100))
+    break;
         default:
           
       }
