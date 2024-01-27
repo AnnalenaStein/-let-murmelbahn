@@ -503,7 +503,7 @@ blocks.push(new BlockCore(
  blocks.push(new BlockCore(
   world,
   {
-    x: 770, y: 4200, w: 150, h: 10, color: 'orange', 
+    x: 790, y: 4200, w: 150, h: 10, color: 'orange', 
     trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
      elise_A3.play();
@@ -515,7 +515,7 @@ blocks.push(new BlockCore(
  blocks.push(new BlockCore(
   world,
   {
-    x: 900, y: 4300, w: 150, h: 10, color: 'orange', 
+    x: 960, y: 4400, w: 150, h: 10, color: 'orange', 
     trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
      elise_A4.play();
@@ -527,7 +527,7 @@ blocks.push(new BlockCore(
  blocks.push(new BlockCore(
   world,
   {
-    x: 980, y: 4400, w: 150, h: 10, color: 'orange', 
+    x: 1100, y: 4600, w: 200, h: 10, color: 'orange', 
     trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
      elise_A5.play();
@@ -536,11 +536,24 @@ blocks.push(new BlockCore(
  { isStatic: true,angle: radians(10),restitution: 0 }
  ));
 
+ blocks.push(new BlockCore(
+  world,
+  {
+    x: 1170, y: 4800, w: 200, h: 10, color: 'orange', 
+    trigger: (ball, blocks) => { //Trigger für Musik
+     //console.log("Trigger", ball, blocks); 
+     elise_A6.play();
+   }
+ },
+ { isStatic: true,angle: radians(10),restitution: 0 }
+ ));
+
+ //Ab hier ist noch Chaos
  //Teil B
       blocks.push(new BlockCore(
         world,
         {
-          x: 1050, y: 4550, w: 200, h: 10, color: 'cyan', 
+          x: 1200, y: 4900, w: 200, h: 10, color: 'cyan', 
           trigger: (ball, blocks) => { //Trigger für Musik
             //console.log("Trigger", ball, blocks); 
             elise_B1.play();
@@ -552,7 +565,7 @@ blocks.push(new BlockCore(
         blocks.push(new BlockCore(
           world,
           {
-            x: 1300, y: 4700, w: 200, h: 10, color: 'magenta', 
+            x: 1300, y: 4900, w: 200, h: 10, color: 'magenta', 
             trigger: (ball, blocks) => { //Trigger für Musik
               //console.log("Trigger", ball, blocks); 
               elise_B2.play();
@@ -564,7 +577,7 @@ blocks.push(new BlockCore(
           blocks.push(new BlockCore(
             world,
             {
-              x: 1500, y: 4800, w: 200, h: 10, color: 'magenta', 
+              x: 1500, y: 4900, w: 200, h: 10, color: 'magenta', 
               trigger: (ball, blocks) => { //Trigger für Musik
                 //console.log("Trigger", ball, blocks); 
                 elise_B3.play();
