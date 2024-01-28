@@ -6,7 +6,7 @@ function addFields() {
   blocks.push(new BlockCore(
     world,
     {
-      x:0, y: 300, w: 4000, h: 10, color: 'red', 
+      x:750, y: 300, w: 1000, h: 0.1, color: ('#372254'), 
       trigger: (murmel, blocks) => { //Trigger für Steuerung
        //console.log("Trigger", ball, blocks); 
 
@@ -20,7 +20,7 @@ function addFields() {
   blocks.push(new BlockCore(
     world,
     {
-      x:0, y: 8100, w: 4000, h: 10, color: 'red', 
+      x:0, y: 8100, w: 2500, h: 0.1, color: ('#2C1A41'), 
       trigger: (murmel, blocks) => { //Trigger für Steuerung
        //console.log("Trigger", ball, blocks); 
 
@@ -34,7 +34,7 @@ function addFields() {
   blocks.push(new BlockCore(
     world,
     {
-      x:0, y: 8300, w: 4000, h: 10, color: 'red', 
+      x:0, y: 8300, w: 3000, h: 0.1, color: ('#2C1A41'), 
       trigger: (murmel, blocks) => { //Trigger für Steuerung
        //console.log("Trigger", ball, blocks); 
 
