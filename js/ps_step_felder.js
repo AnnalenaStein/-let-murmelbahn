@@ -23,8 +23,8 @@ let triggerCount=-0.5
  blockA = new Block(
   world, 
   {
-    //x: 810, y: 200, w: 140, h: 10, color: 'green',
-    x: 70, y: 2, w: 70, h: 10, color: 'green',
+    x: 810, y: 200, w: 140, h: 10, color: 'green',
+    //x: 70, y: 2, w: 70, h: 10, color: 'green',
     trigger: (ball, block) => { //Trigger für Musik
       console.log("Trigger", ball, block);
       let ex
@@ -78,8 +78,8 @@ let triggerCount=-0.5
  blockB = new Block(
   world, 
   {
-    // x: 870, y: 200, w: 70, h: 10, color: 'green',
-    x: 10, y: 10, w: 70, h: 10, color: 'green',
+    x: 870, y: 200, w: 70, h: 10, color: 'green',
+    //x: 10, y: 10, w: 70, h: 10, color: 'green',
     trigger: (ball, block) => { //Trigger für Musik
       console.log("Trigger", ball, block);
       let ex;
