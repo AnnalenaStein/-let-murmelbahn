@@ -6,15 +6,45 @@ function addFields() {
   blocks.push(new BlockCore(
     world,
     {
-      x:0, y: 600, w: 4000, h: 10, color: 'red', 
+      x:0, y: 300, w: 4000, h: 10, color: 'red', 
       trigger: (murmel, blocks) => { //Trigger für Steuerung
        //console.log("Trigger", ball, blocks); 
 
-       jump = false;
+       jp = false;
      }
    },
    { isStatic: true,isSensor:true, restitution: 0  }
    ));
+
+   //Rote Linie ganz weiter unten
+  blocks.push(new BlockCore(
+    world,
+    {
+      x:0, y: 8100, w: 4000, h: 10, color: 'red', 
+      trigger: (murmel, blocks) => { //Trigger für Steuerung
+       //console.log("Trigger", ball, blocks); 
+
+       jp = true;
+     }
+   },
+   { isStatic: true,isSensor:true, restitution: 0  }
+   ));
+
+   //Rote Linie nochmal weiter unten
+  blocks.push(new BlockCore(
+    world,
+    {
+      x:0, y: 8300, w: 4000, h: 10, color: 'red', 
+      trigger: (murmel, blocks) => { //Trigger für Steuerung
+       //console.log("Trigger", ball, blocks); 
+
+       jp = false;
+     }
+   },
+   { isStatic: true,isSensor:true, restitution: 0  }
+   ));
+
+
 
 
 let triggerCount=-0.5
@@ -773,7 +803,7 @@ blocks.push(new BlockCore(
       
      }
    },
-   { isStatic: true, angle: radians(10) }
+   { isStatic: true, angle: radians(15) }
    ));
  
    blocks.push(new BlockCore(
@@ -786,7 +816,7 @@ blocks.push(new BlockCore(
       
      }
    },
-   { isStatic: true, angle: radians(4),restitution: 0 }
+   { isStatic: true, angle: radians(15),restitution: 0 }
    ));
  
 
@@ -960,7 +990,7 @@ let triggerCounttt=-0.5
         Matter.Body.setAngle(block.body,radians(50))
       break;
       case 6.5: 
-      ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+      ex = new Explode({pos:{x: 650, y: 8200}, color: 'white'});
       explodes.push(ex);
       ex.boom();
       Matter.Body.setAngle(block.body,radians(-100))
@@ -1018,7 +1048,7 @@ let triggerCounttt=-0.5
         Matter.Body.setAngle(block.body,radians(-50))
       break;
       case 6.5: 
-      ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
+      ex = new Explode({pos:{x: 650, y: 8200}, color: 'white'});
       explodes.push(ex);
       ex.boom();
       Matter.Body.setAngle(block.body,radians(-100))

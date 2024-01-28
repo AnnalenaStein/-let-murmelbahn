@@ -17,8 +17,12 @@ let angle = 0;
 
 let blockA;
 let blockB;
+let blockC;
+let blockD;
+
 
 let boom;
+//let boomm;
 
 let noteImg;
 let lvl1_C;
@@ -109,6 +113,7 @@ class Explode {
         this.exploded = true;
       }
   }
+  
 
   boom() {
     for (let s = 0; s < 30; s++) {
@@ -243,9 +248,9 @@ function keyPressed(event) {
         Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.00, y: -0.09  });
       } else {
         if(links){
-          Matter.Body.applyForce(murmel.body, murmel.body.position, { x: -0.03, y: 0.0  });
+          Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.00, y: 0.0  });
         } else {
-          Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.03, y: 0.0  });         
+          Matter.Body.applyForce(murmel.body, murmel.body.position, { x: 0.00, y: 0.0  });         
         }
           links = !links;
       }
