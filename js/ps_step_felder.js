@@ -219,7 +219,7 @@ let triggerCount=-0.5
        blocks.push(new BlockCore(
         world,
         {
-          x: 920, y: 1280, w: 100, h: 10, color: 'orange', 
+          x: 910, y: 1290, w: 100, h: 10, color: 'orange', 
           trigger: (ball, blocks) => { //Trigger für Musik
            //console.log("Trigger", ball, blocks); 
            elise_A4.play();
@@ -422,7 +422,7 @@ let triggerCount=-0.5
        elise_D1.play();
      }
    },
-   { isStatic: true,angle: radians(-10),restitution: 0 }
+   { isStatic: true,angle: radians(-15),restitution: 0 }
    ));
 
 
@@ -909,13 +909,13 @@ blocks.push(new BlockCore(
   blocks.push(new BlockCore(
     world,
     {
-      x: 950, y: 7800, w: 200, h: 10, color: 'blue', 
+      x: 900, y: 7800, w: 200, h: 10, color: 'blue', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
        elise_F5.play();
      }
    },
-   { isStatic: true,angle: radians(-3),restitution: 0 }
+   { isStatic: true,angle: radians(0),restitution: 0 }
    ));
 
 //Dreimal jump (3mal Ton F6 muss abgespielt werden)
@@ -935,7 +935,7 @@ let triggerCounttt=-0.5
       let ex
       triggerCounttt++;
       switch(triggerCounttt){
-        case 1.5:
+        case 0.5:
           // ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
           // explodes.push(ex);
           // ex.boom();
@@ -949,17 +949,17 @@ let triggerCounttt=-0.5
        // ex.boom();
        // console.log('yippie boom') 
        elise_F6.play();
-        Matter.Body.setAngle(block.body,radians(50))
+        Matter.Body.setAngle(block.body,radians(20))
 
         break;
-        case 3.5: 
+        case 4.5: 
        // ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
        // explodes.push(ex);
       //  ex.boom();
       elise_F6.play();
         Matter.Body.setAngle(block.body,radians(50))
       break;
-      case 4.5: 
+      case 6.5: 
       ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
       explodes.push(ex);
       ex.boom();
@@ -968,7 +968,7 @@ let triggerCounttt=-0.5
       //this.attributes.color=('#372254');
       //color0;
       //blockA.attributes.noStroke();
-      blockA.attributes.color=('#372254');
+      blockC.attributes.color=('#2C1A41');
     break;
         default:
           
@@ -981,7 +981,7 @@ let triggerCounttt=-0.5
  blocks.push(blockC);
 
    
- let triggerCountttt=0
+ let triggerCountttt=-0.5
 
  //Startblock  
  blockD = new Block(
@@ -993,31 +993,31 @@ let triggerCounttt=-0.5
       let ex
       triggerCountttt++;
       switch(triggerCountttt){
-        case 1:
+        case 0.5:
           // ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
           // explodes.push(ex);
           // ex.boom();
           // console.log('yippie boom') 
           //elise_F6.play();
-          Matter.Body.setAngle(block.body,radians(10))
+          Matter.Body.setAngle(block.body,radians(-10))
           break;
-      case 2:
+      case 2.5:
        // ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
        // explodes.push(ex);
        // ex.boom();
        // console.log('yippie boom') 
       // elise_F6.play();
-        Matter.Body.setAngle(block.body,radians(50))
+        Matter.Body.setAngle(block.body,radians(-20))
 
         break;
-        case 3: 
+        case 4.5: 
        // ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
        // explodes.push(ex);
       //  ex.boom();
      // elise_F6.play();
-        Matter.Body.setAngle(block.body,radians(50))
+        Matter.Body.setAngle(block.body,radians(-50))
       break;
-      case 4: 
+      case 6.5: 
       ex = new Explode({pos:{x: 835, y: 200}, color: 'white'});
       explodes.push(ex);
       ex.boom();
@@ -1026,7 +1026,7 @@ let triggerCounttt=-0.5
       //this.attributes.color=('#372254');
       //color0;
       //blockA.attributes.noStroke();
-      blockA.attributes.color=('#372254');
+      blockD.attributes.color=('#2C1A41');
     break;
         default:
           
