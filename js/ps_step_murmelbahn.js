@@ -73,7 +73,7 @@ let canvasElem;
 let off = { x: 0, y: 0 };
 
  // das ist die Dimension des kompletten Levels
- const dim = { w: 1800, h: 16800 };
+ const dim = { w: 1800, h: 11800 };
 
  class Particle {
   constructor(pos, color) {
