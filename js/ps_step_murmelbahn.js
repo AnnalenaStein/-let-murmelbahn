@@ -15,6 +15,8 @@ let explodes = [];
 let murmel;
 let angle = 0;
 
+let stern;
+
 let blockA;
 let blockB;
 let blockC;
@@ -124,6 +126,7 @@ class Explode {
 
 function preload() {
   noteImg = loadImage('./img/note.png');
+  sternImg = loadImage('./img/stern.png');
   soundFormats('mp3');
   elise_A1 = loadSound('./Musik/FürElise/A1_D3x.mp3');
   elise_A2 = loadSound('./Musik/FürElise/A2_E3.mp3');
@@ -181,7 +184,7 @@ function setup() {
    // blocks.push(murmel);
 
     murmel = new Ball(world,
-      { x: 835, y: 0, r: 25, color: 'white'}, //fromFile: './img/Note.svg', image: noteImg // },
+      { x: 835, y: 0, r: 25, color: 0, image: sternImg}, 
       { label: "Murmel", density: 0.005, restitution: 0, friction: 0.0001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
     );
     blocks.push(murmel);
