@@ -705,41 +705,42 @@ blocks.push(new BlockCore(
 
    //Kommt der Teil hier hin?
    //Baustelle keine Angst
+   //Hüpfend
 
    blocks.push(new BlockCore(
     world,
     {
-      x: 630, y: 5330, w: 70, h: 10, color: 'lime', 
+      x: 650, y: 5360, w: 70, h: 10, color: 'lime', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
-       elise_B1.play();
+       elise_D1.play();
      }
    },
-   { isStatic: true,angle: radians(8),restitution: 0 }
+   { isStatic: true,angle: radians(0),restitution: 1 }
    ));
 
    blocks.push(new BlockCore(
     world,
     {
-      x: 700, y: 5340, w: 70, h: 10, color: 'lime', 
+      x: 750, y: 5350, w: 70, h: 10, color: 'lime', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
-       elise_B2.play();
+       elise_D2.play();
      }
    },
-   { isStatic: true,angle: radians(8),restitution: 0 }
+   { isStatic: true,angle: radians(0),restitution: 1 }
    ));
 
    blocks.push(new BlockCore(
     world,
     {
-      x: 770, y: 5350, w: 70, h: 10, color: 'lime', 
+      x: 850, y: 5340, w: 70, h: 10, color: 'lime', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
-       elise_B3.play();
+       elise_D3.play();
      }
    },
-   { isStatic: true,angle: radians(8),restitution: 0 }
+   { isStatic: true,angle: radians(0),restitution: 2 }
    ));
 
    //Part D
@@ -747,37 +748,37 @@ blocks.push(new BlockCore(
    blocks.push(new BlockCore(
     world,
     {
-      x: 900, y: 5400, w: 100, h: 10, color: 'blue', 
+      x: 950, y: 5400, w: 70, h: 10, color: 'blue', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
-       elise_D1.play();
+       elise_B1.play();
      }
    },
-   { isStatic: true,angle: radians(5),restitution: 1 }
+   { isStatic: true,angle: radians(20),restitution: 0 }
    ));
 
    blocks.push(new BlockCore(
     world,
     {
-      x: 1050, y: 5410, w: 100, h: 10, color: 'blue', 
+      x: 1050, y: 5450, w: 70, h: 10, color: 'blue', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
-       elise_D2.play();
+       elise_B2.play();
      }
    },
-   { isStatic: true,angle: radians(5),restitution: 1 }
+   { isStatic: true,angle: radians(20),restitution: 0 }
    ));
 
    blocks.push(new BlockCore(
     world,
     {
-      x: 1210, y: 5440, w: 100, h: 10, color: 'blue', 
+      x: 1050, y: 5580, w: 70, h: 10, color: 'blue', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
-       elise_D3.play();
+       elise_E1.play();
      }
    },
-   { isStatic: true,angle: radians(5),restitution: 0 }
+   { isStatic: true,angle: radians(0),restitution: 0 }
    ));
    
    //Neuer Part mit vielen Wechseln
@@ -786,25 +787,25 @@ blocks.push(new BlockCore(
    blocks.push(new BlockCore(
     world,
     {
-      x:1300, y:  5660, w: 200, h: 10, color: 'blue', 
+      x:1300, y: 5600, w: 200, h: 10, color: 'blue', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
-       elise_E1.play();
+       elise_B3.play();
      }
    },
-   { isStatic: true,angle: radians(-20),restitution: 0.7 }
+   { isStatic: true,angle: radians(-25),restitution: 1 }
    ));
   
   blocks.push(new BlockCore(
     world,
     {
-      x: 1000, y:  5850, w: 200, h: 10, color: 'blue', 
+      x: 1000, y: 5800, w: 300, h: 10, color: 'blue', 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
        elise_E2.play();
      }
    },
-   { isStatic: true,angle: radians(-10),restitution: 0 }
+   { isStatic: true,angle: radians(-25),restitution: 0 }
    ));
 
    blocks.push(new BlockCore(
@@ -829,7 +830,7 @@ blocks.push(new BlockCore(
        elise_E4.play();
      }
    },
-   { isStatic: true,angle: radians(0),restitution: 0 }
+   { isStatic: true,angle: radians(8),restitution: 0 }
    ));
 
 //Treppe
