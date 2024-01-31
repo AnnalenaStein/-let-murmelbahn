@@ -22,6 +22,20 @@ let blockA;
 let blockB;
 let blockC;
 let blockD;
+let block1;
+let block2;
+let block3;
+let block4;
+let block5;
+let block6;
+let block7;
+let block8;
+let block9;
+let block10;
+let block11;
+let block12;
+
+
 
 
 let boom;
