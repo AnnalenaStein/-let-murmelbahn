@@ -1177,7 +1177,7 @@ let triggerCounttt=-0.5
       //this.attributes.color=('#372254');
       //color0;
       //blockA.attributes.noStroke();
-      blockC.attributes.color=('#311C45');
+      blockC.attributes.color=('');
     break;
         default:
           
@@ -1235,7 +1235,7 @@ let triggerCounttt=-0.5
       //this.attributes.color=('#372254');
       //color0;
       //blockA.attributes.noStroke();
-      blockD.attributes.color=('#311C45');
+      blockD.attributes.color=('');
     break;
         default:
           
@@ -1443,7 +1443,7 @@ let triggerCounttt=-0.5
      elise_A2.play();
    }
  },
- { isStatic: true,angle: radians(-50),restitution: 0 }
+ { isStatic: true,angle: radians(-52),restitution: 0 }
  ));
 
  //Bis hier Triller
@@ -1453,49 +1453,49 @@ let triggerCounttt=-0.5
  blocks.push(new BlockCore(
   world,
   {
-    x: 900, y: 10250, w: 200, h: 10, color: ('#B5443B'), 
+    x: 900, y: 10250, w: 150, h: 10, color: ('#B5443B'), 
     trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
      elise_A3.play();
    }
  },
- { isStatic: true,angle: radians(-10),restitution: 0 }
+ { isStatic: true,angle: radians(-18),restitution: 0 }
  ));
 
  blocks.push(new BlockCore(
   world,
   {
-    x: 740, y: 10500, w: 150, h: 10, color: ('#F7491B'), 
+    x: 775, y: 10500, w: 200, h: 10, color: ('#F7491B'), 
     trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
      elise_A4.play();
    }
  },
- { isStatic: true,angle: radians(-20),restitution: 0 }
+ { isStatic: true,angle: radians(0),restitution: 0 }
  ));
 
  blocks.push(new BlockCore(
   world,
   {
-    x: 550, y: 10700, w: 200, h: 10, color: ('#FFFF00'), 
+    x: 570, y: 10700, w: 200, h: 10, color: ('#FFFF00'), 
     trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
      elise_A5.play();
    }
  },
- { isStatic: true,angle: radians(-50),restitution: 0 }
+ { isStatic: true,angle: radians(-45),restitution: 0 }
  ));
 
  blocks.push(new BlockCore(
    world,
    {
-     x: 100, y: 13000, w: 10000, h: 10, color: ('#D17F09'),
+     x: 300, y: 11080, w: 100, h: 10, color: 0,
      trigger: (ball, blocks) => { //Trigger für Musik
       //console.log("Trigger", ball, blocks); 
-      //elise_A6.play();
+      elise_A6.play();
     }
   },
-  { isStatic: true,angle: radians(0),restitution: 0}
+  { isStatic: true,angle: radians(32),restitution: 0}
   ));
 
 //   //ENDE

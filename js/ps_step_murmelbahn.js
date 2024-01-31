@@ -195,7 +195,7 @@ function setup() {
   world = engine.world;
 
     murmel = new Ball(world,
-      { x: 835, y: 0, r: 25, color: '#372254', image: moonImg}, 
+      { x: 835, y: 0, r: 25, color: 'white', }, 
       { label: "Murmel", density: 0.005, restitution: 0, friction: 0.0001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
     );
     blocks.push(murmel);
