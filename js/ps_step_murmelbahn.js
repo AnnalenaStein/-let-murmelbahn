@@ -130,6 +130,7 @@ function preload() {
   noteImg = loadImage('./img/note.png');
   sternImg = loadImage('./img/stern.png');
   moonImg = loadImage('./img/moon.png');
+  bergImg = loadImage('./img/Berg.png');
   soundFormats('mp3');
   elise_A1 = loadSound('./Musik/FürElise/A1_D3x.mp3');
   elise_A2 = loadSound('./Musik/FürElise/A2_E3.mp3');
@@ -200,6 +201,15 @@ function setup() {
   //ex = new Explode({pos:{x: 100, y: 100}, color: 'red'});
   //ex.boom()
 
+  blocks.push(new PolygonFromSVG(
+    world, {
+    x: 750,
+    y: 11400,
+    scale: 12,
+    fromFile: './img/Berg.svg',
+    color: ('#421737'),
+  }, { isStatic: true, friction: 0.0 }
+  ));
 
    Runner.run(engine);
 
