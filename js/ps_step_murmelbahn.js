@@ -22,6 +22,20 @@ let blockA;
 let blockB;
 let blockC;
 let blockD;
+let block1;
+let block2;
+let block3;
+let block4;
+let block5;
+let block6;
+let block7;
+let block8;
+let block9;
+let block10;
+let block11;
+let block12;
+
+
 
 
 let boom;
@@ -130,6 +144,7 @@ function preload() {
   noteImg = loadImage('./img/note.png');
   sternImg = loadImage('./img/stern.png');
   moonImg = loadImage('./img/moon.png');
+  bergImg = loadImage('./img/Berg.png');
   soundFormats('mp3');
   elise_A1 = loadSound('./Musik/FürElise/A1_D3x.mp3');
   elise_A2 = loadSound('./Musik/FürElise/A2_E3.mp3');
@@ -197,18 +212,18 @@ function setup() {
    mouse = new Mouse(engine, canvas, { stroke: 'orange', strokeWeight: 3 });
   addFields();
   
-  // blocks.push(new PolygonFromSvg(
-  //   world, {
-  //     x: 580
-  //     y: 710
-  //     fromFile: './img/berg.svg',
-  //     scale: 0,
-  //     color: 'yellow'
-  //   }, { isStatic: true, friction: 0.0 }
-  // ));
-
   //ex = new Explode({pos:{x: 100, y: 100}, color: 'red'});
   //ex.boom()
+
+  blocks.push(new PolygonFromSVG(
+    world, {
+    x: 750,
+    y: 11400,
+    scale: 12,
+    fromFile: './img/Berg.svg',
+    color: ('#421737'),
+  }, { isStatic: true, friction: 0.0 }
+  ));
 
    Runner.run(engine);
 
