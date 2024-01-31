@@ -130,7 +130,6 @@ function preload() {
   noteImg = loadImage('./img/note.png');
   sternImg = loadImage('./img/stern.png');
   moonImg = loadImage('./img/moon.png');
-  BergImg = loadImage('./img/Berg.png')
   soundFormats('mp3');
   elise_A1 = loadSound('./Musik/FürElise/A1_D3x.mp3');
   elise_A2 = loadSound('./Musik/FürElise/A2_E3.mp3');
