@@ -197,9 +197,18 @@ function setup() {
    mouse = new Mouse(engine, canvas, { stroke: 'orange', strokeWeight: 3 });
   addFields();
   
+  // blocks.push(new PolygonFromSvg(
+  //   world, {
+  //     x: 580
+  //     y: 710
+  //     fromFile: './img/berg.svg',
+  //     scale: 0,
+  //     color: 'yellow'
+  //   }, { isStatic: true, friction: 0.0 }
+  // ));
+
   //ex = new Explode({pos:{x: 100, y: 100}, color: 'red'});
   //ex.boom()
-
 
    Runner.run(engine);
 
