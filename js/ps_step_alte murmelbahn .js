@@ -88,17 +88,6 @@ function setup() {
       // add a mouse so that we can manipulate Matter objects
    mouse = new Mouse(engine, canvas, { stroke: 'orange', strokeWeight: 3 });
   addFields();
-
-  blocks.push(new PolygonFromSvg(
-    world, {
-      x: 580
-      y: 710
-      fromFile: './img/berg.svg',
-      scale: 0,
-      color: 'yellow'
-    }, { isStatic: true, friction: 0.0 }
-  ));
-  
    Runner.run(engine);
    
 

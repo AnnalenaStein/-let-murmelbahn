@@ -1442,7 +1442,7 @@ let triggerCounttt=-0.5
      elise_A2.play();
    }
  },
- { isStatic: true,angle: radians(-50),restitution: 0 }
+ { isStatic: true,angle: radians(-52),restitution: 0 }
  ));
 
  //Bis hier Triller
@@ -1458,7 +1458,7 @@ let triggerCounttt=-0.5
      elise_A3.play();
    }
  },
- { isStatic: true,angle: radians(-10),restitution: 0 }
+ { isStatic: true,angle: radians(-18),restitution: 0 }
  ));
 
  blocks.push(new BlockCore(
@@ -1470,7 +1470,7 @@ let triggerCounttt=-0.5
      elise_A4.play();
    }
  },
- { isStatic: true,angle: radians(-20),restitution: 0 }
+ { isStatic: true,angle: radians(0),restitution: 0 }
  ));
 
  blocks.push(new BlockCore(
@@ -1488,13 +1488,13 @@ let triggerCounttt=-0.5
  blocks.push(new BlockCore(
    world,
    {
-     x: 100, y: 13000, w: 10000, h: 10, color: ('#D17F09'),
+     x: 300, y: 11080, w: 100, h: 10, color: 0,
      trigger: (ball, blocks) => { //Trigger für Musik
       //console.log("Trigger", ball, blocks); 
-      //elise_A6.play();
+      elise_A6.play();
     }
   },
-  { isStatic: true,angle: radians(0),restitution: 0}
+  { isStatic: true,angle: radians(32),restitution: 0}
   ));
 
 //   //ENDE
