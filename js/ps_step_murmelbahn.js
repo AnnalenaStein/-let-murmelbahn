@@ -211,10 +211,15 @@ function setup() {
       // add a mouse so that we can manipulate Matter objects
    mouse = new Mouse(engine, canvas, { stroke: 'orange', strokeWeight: 3 });
   addFields();
+  addStars();
   
   //ex = new Explode({pos:{x: 100, y: 100}, color: 'red'});
   //ex.boom()
 
+  
+
+  
+  //Unterer Berg
   blocks.push(new PolygonFromSVG(
     world, {
     x: 750,
