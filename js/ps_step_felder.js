@@ -2,6 +2,7 @@
 
 function addFields() {
 
+  //Farben
   // blocks.push(new BlockCore(
   //   world,
   //   {
@@ -50,17 +51,17 @@ function addFields() {
   //  { isStatic: true,angle: radians(0),restitution: 0 }
   //  ));
 
-   blocks.push(new BlockCore(
-    world,
-    {
-      x: 700, y: 175, w: 100, h: 10, color: ('#E0AF7E'), 
-      trigger: (ball, blocks) => { //Trigger für Musik
-       //console.log("Trigger", ball, blocks); 
-       elise_A4.play();
-     }
-   },
-   { isStatic: true,angle: radians(0),restitution: 0 }
-   ));
+  //  blocks.push(new BlockCore(
+  //   world,
+  //   {
+  //     x: 700, y: 175, w: 100, h: 10, color: ('#E0AF7E'), 
+  //     trigger: (ball, blocks) => { //Trigger für Musik
+  //      //console.log("Trigger", ball, blocks); 
+  //      elise_A4.play();
+  //    }
+  //  },
+  //  { isStatic: true,angle: radians(0),restitution: 0 }
+  //  ));
 
   //  blocks.push(new BlockCore(
   //   world,
