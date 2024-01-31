@@ -1408,7 +1408,7 @@ let triggerCounttt=-0.5
  blocks.push(new BlockCore(
   world,
   {
-    x:950, y: 10000, w: 100, h: 10, color: ('#D95100'), 
+    x: 1000, y: 10000, w: 100, h: 10, color: ('#D95100'), 
     trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
      elise_A2.play();
