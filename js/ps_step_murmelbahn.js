@@ -29,6 +29,7 @@ let boom;
 
 let noteImg;
 let lvl1_C;
+let Berg;
 
 let elise_A1;
 let elise_A2;
@@ -129,6 +130,7 @@ function preload() {
   noteImg = loadImage('./img/note.png');
   sternImg = loadImage('./img/stern.png');
   moonImg = loadImage('./img/moon.png');
+  BergImg = loadImage('./img/Berg.png')
   soundFormats('mp3');
   elise_A1 = loadSound('./Musik/FürElise/A1_D3x.mp3');
   elise_A2 = loadSound('./Musik/FürElise/A2_E3.mp3');
@@ -178,13 +180,6 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
-    // the ball has a label and can react on collisions
-   // murmel = new Ball(world,
-      //{ x: 50, y: 60, r: 25, fromFile: './img/Note.svg', image: noteImg  },
-     // { label: "Murmel", density: 0.005, restitution: 0.2, friction: 0.001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
-  //  );
-   // blocks.push(murmel);
-
     murmel = new Ball(world,
       { x: 835, y: 0, r: 25, color: '#372254', image: moonImg}, 
       { label: "Murmel", density: 0.005, restitution: 0, friction: 0.0001, frictionAir: 0.007 } //Murmel wird bei frictionAir ein bisschen gebremst
@@ -208,21 +203,18 @@ function setup() {
 
 
    Runner.run(engine);
-   
 
-   
-   // process collisions - check whether block "Murmel" hits another Block
    Events.on(engine, 'collisionStart', function (event) {
-     var pairs = event.pairs;
-     pairs.forEach((pair, i) => {
-       if (pair.bodyA.label == 'Murmel') {
-         pair.bodyA.plugin.block.collideWith(pair.bodyB.plugin.block)
-        }
-        if (pair.bodyB.label == 'Murmel') {
-          pair.bodyB.plugin.block.collideWith(pair.bodyA.plugin.block)
-        }
-      })
-    });
+    var pairs = event.pairs;
+    pairs.forEach((pair, i) => {
+      if (pair.bodyA.label == 'Murmel') {
+        pair.bodyA.plugin.block.collideWith(pair.bodyB.plugin.block)
+      }
+      if (pair.bodyB.label == 'Murmel') {
+        pair.bodyB.plugin.block.collideWith(pair.bodyA.plugin.block)
+      }
+    })
+  })
     
   }
    
@@ -241,8 +233,6 @@ function setup() {
   // Matter mouse needs the offset as well
   mouse.setOffset(off);
 }
-
-
 
 function keyPressed(event) {
   switch (keyCode) {

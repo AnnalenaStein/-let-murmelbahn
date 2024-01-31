@@ -487,7 +487,7 @@ let triggerCount=-0.5
      elise_C1.play();
    }
  },
- { isStatic: true,angle: radians(3),restitution: 0 }
+ { isStatic: true,angle: radians(10),restitution: 0 }
  ));
 
 
@@ -513,7 +513,7 @@ let triggerCount=-0.5
       elise_C4.play();
     }
   },
-  { isStatic: true,angle: radians(-15),restitution: 0 }
+  { isStatic: true,angle: radians(-25),restitution: 0 }
   ));
 
   blocks.push(new BlockCore(
@@ -1046,26 +1046,26 @@ blocks.push(new BlockCore(
      
     }
   },
-  { isStatic: true, angle: radians(3),restitution: 0 }
+  { isStatic: true, angle: radians(5),restitution: 0 }
   ));
 
   //Treppe vor Explosionsfeld
   blocks.push(new BlockCore(
     world,
     {
-      x: 1500, y: 7550, w: 200, h: 10, color: ('#FFFF00'), 
+      x: 1500, y: 7540, w: 150, h: 10, color: ('#FFFF00'), 
       trigger: (ball, blocks) => { //Trigger für Musik
        console.log("Trigger", ball, blocks); 
        elise_F4.play();
      }
    },
-   { isStatic: true,angle: radians(-15),restitution: 0 }
+   { isStatic: true,angle: radians(-25),restitution: 0.4 }
    ));
 
    blocks.push(new BlockCore(
     world,
     {
-      x: 1300, y:  7630, w: 150, h: 10, color: ('#F7491B'), 
+      x: 1300, y:  7630, w: 200, h: 10, color: ('#F7491B'), 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
        elise_F3.play();
@@ -1077,7 +1077,7 @@ blocks.push(new BlockCore(
   blocks.push(new BlockCore(
    world,
    {
-     x: 1150, y: 7750, w: 180, h: 10, color: ('#FFFF00'), 
+     x: 1150, y: 7750, w: 150, h: 10, color: ('#FFFF00'), 
      trigger: (ball, blocks) => { //Trigger für Musik
       //console.log("Trigger", ball, blocks); 
       elise_F4.play();
@@ -1089,13 +1089,13 @@ blocks.push(new BlockCore(
   blocks.push(new BlockCore(
     world,
     {
-      x: 900, y: 7800, w: 200, h: 10, color: ('#B5443B'), 
+      x: 950, y: 7830, w: 100, h: 10, color: ('#B5443B'), 
       trigger: (ball, blocks) => { //Trigger für Musik
        //console.log("Trigger", ball, blocks); 
        elise_F5.play();
      }
    },
-   { isStatic: true,angle: radians(0),restitution: 0 }
+   { isStatic: true,angle: radians(5),restitution: 0 }
    ));
 
 //Dreimal jump (3mal Ton F6 muss abgespielt werden)
@@ -1430,13 +1430,13 @@ let triggerCounttt=-0.5
      elise_A3.play();
    }
  },
- { isStatic: true,angle: radians(20),restitution: 0 }
+ { isStatic: true,angle: radians(-10),restitution: 0 }
  ));
 
  blocks.push(new BlockCore(
   world,
   {
-    x: 1100, y: 10400, w: 150, h: 10, color: ('#F7491B'), 
+    x: 700, y: 10500, w: 150, h: 10, color: ('#F7491B'), 
     trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
      elise_A4.play();
@@ -1448,19 +1448,19 @@ let triggerCounttt=-0.5
  blocks.push(new BlockCore(
   world,
   {
-    x: 1000, y: 10500, w: 200, h: 10, color: ('#FFFF00'), 
+    x: 500, y: 10700, w: 200, h: 10, color: ('#FFFF00'), 
     trigger: (ball, blocks) => { //Trigger für Musik
      //console.log("Trigger", ball, blocks); 
      elise_A5.play();
    }
  },
- { isStatic: true,angle: radians(30),restitution: 0 }
+ { isStatic: true,angle: radians(-40),restitution: 0 }
  ));
 
  blocks.push(new BlockCore(
    world,
    {
-     x: 1100, y: 10600, w: 1000, h: 10, color: ('#D17F09'),
+     x: 100, y: 13000, w: 10000, h: 10, color: ('#D17F09'),
      trigger: (ball, blocks) => { //Trigger für Musik
       //console.log("Trigger", ball, blocks); 
       elise_A6.play();
