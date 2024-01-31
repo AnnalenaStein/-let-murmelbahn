@@ -1147,7 +1147,7 @@ let triggerCounttt=-0.5
       //this.attributes.color=('#372254');
       //color0;
       //blockA.attributes.noStroke();
-      blockC.attributes.color=('#2C1A41');
+      blockC.attributes.color=('#311C45');
     break;
         default:
           
@@ -1205,7 +1205,7 @@ let triggerCounttt=-0.5
       //this.attributes.color=('#372254');
       //color0;
       //blockA.attributes.noStroke();
-      blockD.attributes.color=('#2C1A41');
+      blockD.attributes.color=('#311C45');
     break;
         default:
           
